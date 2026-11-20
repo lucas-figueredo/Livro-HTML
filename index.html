@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Livro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MathJax para renderizar as equações -->
+    <script>
+        window.MathJax = {
+            tex: {
+              inlineMath: [['\\(', '\\)']],
+              displayMath: [['\\[', '\\]']],
+              tags: 'ams', 
+              useLabelIds: true       
+            }
+        };
+    </script>
+
+    <script async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body>
+  <div id="book"></div>
+
+
+
+  <script>
+    const chapters = [
+      "Chapters/chapter_1.html",
+      "Chapters/chapter_2.html",
+      "Chapters/chapter_3.html",
+      "Chapters/chapter_10.html",
+      "Chapters/chapter_14.html"
+    ];
+
+    let index = 0;
+    let loading = false;
+
+    // Renderiza as equações só quando o MathJax terminou de carregar
+    function renderMath(el) {
+      const run = () => {
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.startup.promise = MathJax.startup.promise
+            .then(() => MathJax.typesetPromise([el]))
+            .catch(err => console.error("MathJax:", err));
+        } else {
+          // MathJax ainda não carregou: tenta de novo em instantes
+          setTimeout(run, 100);
+        }
+      };
+      run();
+    }
+
+    function loadNextChapter() {
+      if (loading || index >= chapters.length) return;
+      loading = true;
+
+      fetch(chapters[index])
+        .then(res => {
+          if (!res.ok) throw new Error(res.status + " " + chapters[index]);
+          return res.text();
+        })
+        .then(html => {
+          const book = document.getElementById("book");
+
+          const section = document.createElement("section");
+          section.className = "chapter";
+          section.innerHTML = html;
+          book.appendChild(section);
+
+          // opcional: marcador invisível
+          const divider = document.createElement("div");
+          divider.className = "divider";
+          book.appendChild(divider);
+
+          index++;
+
+          // reprocessa as equações só neste capítulo
+          renderMath(section);
+        })
+        .catch(err => console.error("Erro ao carregar capítulo:", err))
+        .finally(() => { loading = false; });
+    }
+
+    // carrega o primeiro capítulo
+    loadNextChapter();
+
+    // carrega mais quando o usuário chega perto do fim
+    window.addEventListener("scroll", () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+        loadNextChapter();
+      }
+    });
+  </script>
+</body>
+</html>
