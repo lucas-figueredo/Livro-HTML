@@ -1,0 +1,1 @@
+O trabalho de conversão do [Livro](https://lucas-figueredo.github.io/Livro-HTML/) iniciou com [Maria Luíza Bertin](https://github.com/MariaLuizaBertin) e seguiu com [Lucas Figueredo de Oliveira](https://github.com/lucas-figueredo).
