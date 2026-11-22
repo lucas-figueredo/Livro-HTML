@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="generator" content="pandoc 3.10.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chapter 10 - Utilities</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJax para renderizar as equações -->
+    <script>
+        window.MathJax = {
+            tex: {
+              inlineMath: [['\\(', '\\)']],
+              displayMath: [['\\[', '\\]']],
+              tags: 'ams', 
+              useLabelIds: true       
+            }
+        };
+    </script>
+
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+<body>
+<h1 class="unnumbered" id="chapter-10-utilities">CHAPTER 10
+UTILITIES
+</h1>
+
+<p>
+  For the operation of an offshore unit, its pumps need electrical
+  power, heat exchangers are used to heat the oil, valves require
+  compressed air, and a flare is needed for emergency burning, among other
+  things. Utilities are the auxiliary systems that generate the conditions
+  (fluids or energy) necessary for the process plant to function. The main
+  utility systems are:
+</p>
+
+<p>Heating Water<br />
+Cooling Water<br />
+Power Generation<br />
+Inert Gas<br />
+Firefighting<br />
+Relief and Flare<br />
+Fuel Gas<br />
+Compressed Air<br />
+Potable Water<br />
+Chemical Dosing<br />
+Drainage</p>
+
+<h2>10.1 HEATING SYSTEM</h2>
+
+<p>
+  The heat source of a platform usually comes from the exhaust gases of
+  the compression system turbines or from power generation units. Heat
+  recovery units, known as WHRUs (Waste Heat Recovery Units), transfer
+  heat between the exhaust gases and the heating water in a closed system.
+  To improve heat exchange efficiency, the heating fluid temperature is
+  typically between 140°C and 180°C.
+</p>
+
+<p>
+  Steam Table Source: modified from VPH flow system (http://www.industrialconsult.com.br/vapor.pdf)
+</p>
+
+<figure data-latex-placement="h">
+<img src="../Figures/Chap 10/Figure 1 Heating System.png" style="width:60.0%" />
+<figcaption>Figure 1: Heating System</figcaption>
+</figure>
+
+<p>
+  This system is pressurized at approximately 1300 kPa abs to ensure
+  that water reaches temperatures above 100°C while remaining in the
+  liquid phase. Such pressure is required to obtain hot water (liquid
+  phase) at a temperature of 180°C.
+</p>
+
+<p><strong>Example</strong></p>
+
+<p>
+  The expansion vessel of a heating system operates at a pressure of 13
+  bar abs to achieve a temperature of 180°C, which is required to supply
+  hot water consumers (oil and gas heaters, among others). In case of an
+  operational anomaly, such as a production shutdown, system pressure
+  drops to 8 bar gauge. Under this condition, a temperature of 176°C is
+  observed, but it is uncertain whether this favors or prevents
+  vaporization (an event that increases operational safety risks). This
+  condition can lead to a volume increase (vapor phase) of approximately
+  1000 times, potentially compromising equipment integrity.
+</p>
+
+<table>
+<caption> Table 1: Steam Table Data (Source: Modified from VPH Flow
+System)</caption>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Relative Pressure (bar
+g)</strong></th>
+<th style="text-align: center;"><strong>Absolute Pressure
+(bar)</strong></th>
+<th style="text-align: center;"><strong>Temperature (°C)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">174,5</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">183,2</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">187,1</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">190,7</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">194,1</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Solution</strong></p>
+
+<p>
+  At the expansion vessel’s operating pressure of 13 bar abs (12 bar
+  g), the saturation temperature (start of vaporization) from the Steam
+  Table is 190,7°C. Therefore, at 180°C, vaporization does not occur (an
+  undesirable phenomenon).</p>
+
+<p>
+  However, under contingency conditions (production shutdown), at a
+  pressure of 8 bar g, the vessel reaches a temperature of 176°C.
+  According to the Steam Table, the saturation temperature is 174,5°C,
+  which is lower than the observed temperature, indicating the formation
+  of unwanted vapor.</p>
+
+<p>
+  Pressure and inventory control is achieved by regulating the natural
+  gas flow into the expansion vessel, as shown in the figure below. This
+  hot water is then used to heat the platform fluids.
+</p>
+
+<p>
+  Heavy oils are typically associated with high viscosities (requiring
+  higher temperatures for separation) and low gas production (resulting in
+  a small-scale compression system). Consequently, the thermal load
+  available in the WHRUs of the heating water system may not be sufficient
+  to heat the oil to the required temperature. In these cases, additional
+  heating using furnaces may be necessary.
+</p>
+
+<h2>10.2 COOLING SYSTEM</h2>
+
+<p>
+  The cooling system can be either an open or closed circuit. In an
+  open system, the cooling fluid is seawater, which returns to the ocean
+  after passing through heat exchangers where it absorbs heat. This system
+  has a higher cost than the closed system because it requires special
+  materials for heat exchangers. In small plants, this approach may be
+  viable. However, as plants increase in complexity, the overall size of
+  the cooling system and the number of cooling points also increase. In
+  such cases, a closed system is preferred, where the cooling fluid is
+  freshwater circulating in a closed loop, absorbing heat at various
+  points in the process plant and transferring this heat to seawater.
+  Freshwater allows for the use of lower-cost carbon steel. An expansion
+  tank serves as a buffer for the system.
+</p>
+
+<figure data-latex-placement="h">
+<img src="../Figures/Chap 10/Figure 2 Closed Cooling System.png" style="width:60.0%" />
+<figcaption>Figure 2: Closed Cooling System</figcaption>
+</figure>
+
+<p>
+  Unlike the heating system, the expansion tank in the cooling system
+  operates at atmospheric pressure and has a vent to the environment. Its
+  function is to allow for the replenishment of losses in the circulating
+  freshwater. The following points are common users of cooling water:</p>
+
+<p><strong>Cooling Points in Classified Areas:<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></strong></p>
+<ul>
+<li><p>TEG cooling after regeneration</p></li>
+<li><p>Natural gas cooling after each compression stage</p></li>
+<li><p>Vapor recovery unit</p></li>
+</ul>
+
+<p><strong>Cooling Points in Non-Classified Areas:</strong></p>
+
+<ul>
+<li><p>Bearing cooling</p></li>
+<li><p>Turbogenerator cooling</p></li>
+<li><p>Air conditioning unit</p></li>
+<li><p>Instrument and service air compressor cooling</p></li>
+</ul>
+
+<h2>10.3 POWER GENERATION SYSTEM</h2>
+
+<p>
+  The power generation system is designed to meet the electrical energy
+  demands of UEP equipment, with the main consumers being compressors
+  (primary, export, auxiliary, and gas injection) and pumps (injection,
+  offloading, seawater intake, sulfate removal unit, cooling water system,
+  heating water system, and oil transfer). Additionally, gas dehydration
+  units use electrical heating for glycol regeneration.
+</p>
+
+<p>
+  The system consists of three main types: primary generation,
+  emergency generation, and transient power system.
+</p>
+
+<p><strong>Primary Power Generation System:</strong> Designed to ensure
+electricity supply to all loads of the UEP. Generally, gas-fueled
+turbogenerators are used, which can also burn diesel fuel in
+emergencies.
+</p>
+
+<p><strong>Emergency Power Generation System:</strong> Must be capable
+of continuously supplying essential platform loads, such as ventilation
+and air conditioning, air compressor, emergency seawater intake pump,
+emergency cooling pump, etc. The system must be autonomous, start
+automatically, and assume the load within 45 seconds in case of main
+power failure. The generator should have a minimum operational autonomy
+of 18 hours without refueling. Diesel engine generators are typically
+used, with compressed air starting systems powered by dedicated diesel
+engines, and manual crank start options.
+</p>
+
+<p><strong>Transient Power System:</strong> Consists of batteries
+(uninterrupted power supply - UPS). This system maintains essential
+emergency services powered continuously, ensuring the safety of the UEP
+without interruptions during main power failure and subsequent emergency
+power generation startup. It also powers services that remain active
+after emergency generation shutdown, such as platform abandonment or
+evacuation scenarios.
+</p>
+
+<p>In UEPs with capacities between 100 and 150 kbpd, there is a trend
+toward standardizing power generation with four 25 MW
+turbogenerators.
+</p>
+
+<h2>10.4 FIRE PROTECTION SYSTEM</h2>
+
+<p>The fire protection system consists of CO<sub>2</sub>, foam, and
+deluge systems to combat fires.
+</p>
+
+<p><strong>CO<sub>2</sub> System:</strong> Designed to combat fires in
+enclosed areas by flooding them with CO<sub>2</sub>. It preserves
+equipment and is used in critical safety areas. The system should only
+be activated after a specific alarm and full evacuation of the area, due
+to the risk of asphyxiation.</p>
+
+<p>
+<strong>Foam System:</strong> Used to extinguish fires in areas with
+flammable liquid spills, such as the helideck and oil processing
+areas.
+</p>
+
+<p>
+<strong>Deluge System:</strong> Designed to cool potential fire
+sources in most platform areas, preventing structural collapse of
+vessels and pipelines. It consists of a seawater ring, continuously
+pressurized by jockey pumps, with distribution networks containing
+sprinklers, hydrant branches, and intake pumps.
+</p>
+
+<h2>10.5 INERT GAS SYSTEM</h2>
+
+<p>
+  The inert gas used is primarily CO<sub>2</sub>, resulting from the
+  stoichiometric combustion of fuel (diesel or gas). It is injected into
+  cargo and slop tanks to maintain a safe atmosphere and pressure and
+  facilitate purging. It is also used in ballast tanks, void spaces in the
+  cargo area, and in emergency situations.
+</p>
+
+<p>Although significant amounts of combustion gas (rich in
+  CO<sub>2</sub>) are available from the power generation system, the
+  inert gas generation system must be independent for operational
+  safety.
+</p>
+
+<p>
+  The generated gases are seawater-washed to cool and remove sulfur
+  oxides. Each cargo tank has independent inert gas supply and relief
+  lines. Pressure and O<sub>2</sub> concentration in the inert gas header
+  are monitored and interlocked with the offloading system, potentially
+  stopping cargo pumps.
+</p>
+
+<p>
+  Variables such as tank pressure and O<sub>2</sub> content in the
+  inert gas header are monitored and interlocked with the offloading
+  system, which may result in the shutdown of cargo pumps.
+</p>
+
+<h2>10.6 RELIEF AND FLARE SYSTEM</h2>
+
+<p>
+  The FPSO Flare System is designed based on the maximum gas flow rate
+  under continuous or emergency burning conditions, without considering
+  simultaneous events.
+</p>
+
+<p>
+  The flare system is designed to prevent the pressure of the FPSO
+  systems from exceeding the maximum pressure of the equipment and
+  accessories that compose them. Therefore, its function is to relieve
+  pressure, disperse, and safely burn hydrocarbons from the Production
+  Facilities in case of emergency or process disturbances. This system
+  must be capable of burning any gas flow rate, from the minimum to the
+  maximum design capacity, under continuous or emergency burning
+  conditions. Additionally, it must allow for the flow of relieved and
+  condensed liquid during depressurization, separating it from the gas
+  before the latter is sent for combustion in the flare.
+</p>
+
+<figure data-latex-placement="h">
+<div class="minipage">
+<img src="/Figures/Chap 10/Figure 3.1 Flare in SS and FPSO DIG 43792 DIG 44510.jpg" style="width:100.0%" />
+</div>
+<figcaption>Figure 3: FPSO DIG 43792 DIG 44510</figcaption>
+<div class="minipage">
+<img src="/Figures/Chap 10/Figure 3.2 Flare in SS and FPSO DIG 43792 DIG 44510.jpg" style="width:50.0%" />
+</div>
+<figcaption>Figure 4: Flare in SS</figcaption>
+</figure>
+
+<p>
+  The main causes of overpressure considered in the FPSO Flare System
+  design are: Blocked Discharge and Fire.</p>
+
+<p>
+  Fire is an overpressure cause that can only be minimized through a
+  planned shutdown and the installation of depressurization devices. The
+  external exposure of equipment to fire generates overpressure through
+  two primary mechanisms: liquid vaporization and gas volume
+  expansion.</p>
+
+<p>
+  The inadvertent closure of a manual valve at the discharge of a
+  system or pressure vessel while operational can generate excessive
+  pressure within the system or equipment. Any valve should be considered
+  as potentially susceptible to inadvertent closure or opening.
+</p>
+
+<p>
+  To reduce system pressure during overpressure conditions, relief
+  scenarios are considered, where Pressure Safety Valves (PSV) are used to
+  lower the system pressure, and depressurization scenarios, where
+  pressure reduction occurs through the opening of Blowdown Valves
+  (BDV).
+</p>
+
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>The definition of classified areas is provided in
+Chapter 13 Design of Production Systems<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

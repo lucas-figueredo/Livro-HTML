@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="generator" content="pandoc 3.10.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chapter 14 - Case Studies</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJax para renderizar as equações -->
+    <script>
+        window.MathJax = {
+            tex: {
+              inlineMath: [['\\(', '\\)']],
+              displayMath: [['\\[', '\\]']],
+              tags: 'ams', 
+              useLabelIds: true       
+            }
+        };
+    </script>
+
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body>
+<h1 class="unnumbered" id="chapter-14-case-studies">CHAPTER 14 CASE
+STUDIES
+</h1>
+
+<h2>14.1 STANDARDIZATION OF FPSOs: THE REPLICANTS</h2>
+
+<p>
+  The standardization of equipment is an old practice in the industry.
+  Heat exchangers, pumps, vessels, valves, pipelines, flexible lines, and
+  well casing are examples of equipment that have been standardized to
+  facilitate the construction process. Even equipment whose sizing is
+  usually customized for process conditions, such as vessels, have
+  standardized heads and inspection openings.
+</p>
+
+<p>
+  Flexible lines are now standardized in sizes of 4, 6, and 8 inches.
+  Wells also have standard casing diameters.
+</p>
+
+<p>
+  However, standardizing an FPSO is much more difficult to achieve. The
+  process plant comprises a large number of different systems designed to
+  meet the specific characteristics of each oil field, such as gas-oil
+  ratio, densities, viscosities, flow rates, etc. The water depth affects
+  both the mooring system and the subsea pipelines. Flow assurance issues
+  and reservoir characteristics are also field-dependent. Consequently,
+  the design of such units is usually customized for each field, known as
+  "tailor-made." Designing for the worst conditions is a trivial
+  engineering solution but is not feasible from a business perspective, as
+  it implies excessive costs and waste. For these and other reasons,
+  standardization of such units has never been widely implemented.</p>
+
+<p>
+  After analyzing operational data, lessons learned from Petrobras’
+  long history of implemented projects, and evaluating engineering methods
+  and criteria used for FPSO design, in 2008, the author conceived a new
+  design methodology that enabled the achievement of these ambitious
+  goals. The principle was that the many uncertainties inherent in the
+  development of oil production systems should be incorporated into FPSO
+  design—something not previously done. The aim was to design a flexible
+  FPSO in terms of flow rate, oil type, contaminants, water depth,
+  etc.
+</p>
+
+<p>
+  A radical change in design philosophy was proposed, where major
+  equipment would have fixed dimensions, and to accommodate different flow
+  rates, they would be installed in a modular plug-and-play style, similar
+  to a Lego system. As an example, consider the sizing of a seawater
+  injection system. To maintain reservoir pressure, it is necessary to
+  inject a volume of water similar to the liquid production. For
+  production systems ranging between 150,000 and 200,000 barrels of oil
+  per day, the maximum liquid flow rate must be estimated. Suppose
+  reservoir engineers do not yet have sufficient information but estimate
+  that the Bo is between 1,5 and 2. The estimated flow rate ranges are
+  shown in the table below.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Production</strong></th>
+<th style="text-align: center;"><strong>Injection Water Flow
+Rate</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2" style="text-align: center;">150.000</td>
+<td style="text-align: center;">225000 (minimum)</td>
+</tr>
+<tr>
+<td style="text-align: center;">300000 (maximum)</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">200.000</td>
+<td style="text-align: center;">300000 (minimum)</td>
+</tr>
+<tr>
+<td style="text-align: center;">400000 (maximum)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  <a href="#tab2" data-reference-type="ref" data-reference="tab2">The following table</a>
+  shows the difference in approach between a
+  tailor-made project and a standardized project.
+</p>
+
+<p>
+  A tailor-made project would always adopt 3 pumps, each with 33% of
+  the total flow rate.Thus, depending on the demand, different flow rates
+  would be required for the pumps, as shown below. The module would be
+  designed for these three pumps.</p>
+
+<p>
+  By adopting the standardization philosophy, the sizing would be done
+  by proposing pumps with a fixed flow rate—in this case, 70,000 bpd, as
+  it is observed that by combining 3 or 4 of these, any of the required
+  demands can be met.Therefore, the module should be designed with space
+  for the installation of 4 pumps, and it will be up to the designer to
+  define how many pumps will be used in each new project, without the need
+  to resize them or redo the design.</p>
+
+<table id="tab2" data-latex-placement="h">
+<thead>
+<tr>
+<th style="text-align: center;"><strong>Demand</strong></th>
+<th style="text-align: center;"><strong>Tailor-Made
+Project</strong></th>
+<th style="text-align: center;"><strong>Standardized
+Project</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">225000</td>
+<td style="text-align: center;">3 x 75.000</td>
+<td style="text-align: center;">3 x 100.000</td>
+</tr>
+<tr>
+<td style="text-align: center;">300000</td>
+<td style="text-align: center;">3 x 100.000</td>
+<td style="text-align: center;">3 x 100.000</td>
+</tr>
+<tr>
+<td style="text-align: center;">400000</td>
+<td style="text-align: center;">3 x 135.000</td>
+<td style="text-align: center;">4 x 100.000</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+  If preliminary estimates for a project predict 300,000 bpd of
+  injection water, the designer should plan for the installation of three
+  pumps, leaving the fourth slot empty. If, during the project, it is
+  concluded that the demand will be 350,000 bpd instead of 300,000 bpd,
+  the designer should now foresee the installation of four pumps. This
+  would result in an injection capacity of 400,000 bpd, which is above the
+  necessary demand. At first glance, this excess capacity may seem like a
+  waste and would not occur in a tailor-made project, which would adopt 3
+  x 117,000 bpd. However, the benefits of standardizing pump capacities
+  and power ratings outweigh this apparent inefficiency.</p>
+  
+<p>
+  The philosophy demonstrated in the example above was applied as much
+  as possible in the conceptual design of the entire process plant, always
+  aiming to make it as flexible as possible. Entire modules, such as the
+  CO<span class="math inline">\(_2\)</span> separation module, were
+  dimensioned this way. In this new design philosophy, this module would
+  not be installed if CO<span class="math inline">\(_2\)</span> were
+  absent in the target field. The space reserved for its installation on
+  the ship’s deck would remain empty, but the design would remain
+  unchanged.
+</p>
+
+<p>
+  Later, the ship’s hull was standardized to accommodate the plant. The
+  chosen mooring system was spread mooring, designed for operation in
+  ultra-deep waters. The standardization of the process plant and the
+  vessel resulted in a flexible FPSO that could be used in fields with
+  different characteristics. The conceptual design was named Replicant.
+  Subsequently, the basic design was executed. However, the proposal to
+  leave empty slots was not adopted, which reduced the final project’s
+  flexibility.
+</p>
+
+<p>
+  The discovery of the Pre-Salt area, with its vast reserves, combined
+  with the flexibility of the standards, presented an opportunity to
+  advance projects by contracting a large number of ships without
+  predefined locations. Preliminary data showed that differences in GOR,
+  API, field depth, etc., could be accommodated by the standard vessel.
+  Petrobras then decided to contract eight similar units, an unprecedented
+  move in the history of the oil industry.
+</p>
+
+<figure data-latex-placement="h">
+<img src="/Figures/Chap 14/Figure 1 Standard FPSO The Replicant..png" style="width:70.0%" />
+<figcaption>Figure 1: Standard FPSO: The Replicant.</figcaption>
+</figure>
+
+<p>
+  The Rio Grande shipyard was chosen to carry out the construction of
+  the Replicants. Several companies were contracted to supply the modules
+  and equipment.
+</p>
+
+<figure data-latex-placement="h">
+<img src="/Figures/Chap 14/Figure 2 Rio Grande Shipyard.jpg" style="width:60.0%" />
+<figcaption>Figure 2: Rio Grande Shipyard.</figcaption>
+</figure>
+</body>
+</html>

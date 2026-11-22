@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 16px;
+    line-height: 1.7;
+    color: #222;
+
+    background-color: white;
+}
+
+/* Título do capítulo */
+h1 {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* Seções */
+h2 {
+    font-size: 22px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: 19px;
+    margin-top: 30px;
+}
+
+
+.section-break {
+    margin-top: 30px;   
+    margin-bottom: 30px; 
+}
+
+/* Parágrafos */
+p {
+    text-align: justify;
+    margin: 12px 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+.center {
+  text-align: center; 
+  margin: 0 auto;  
+}
+
+.center mjx-container {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+/* Listas */
+ul,
+ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+/* listas com letras */
+ol.alpha {
+  list-style-type: lower-alpha;
+}
+ol.alpha li::marker {
+  content: counter(list-item, lower-alpha) ") ";
+}
+
+/* listas com números */
+ol.numeric {
+  list-style-type: decimal;
+}
+ol.numeric li::marker {
+  content: counter(list-item, decimal) ") ";
+}
+
+
+/* Citações */
+blockquote {
+    margin: 20px 40px;
+}
+
+/* Duas colunas */
+.columns {
+    column-count: 2;
+    column-gap: 50px;
+}
+.columns ul {
+    list-style: none;     
+    padding-left: 10px;     
+    margin: 0;
+}
+
+.columns li {
+    margin-bottom: 8px;  
+    padding-left: 10px;
+}
+
+/* Figuras (padrão) */
+figure {
+    text-align: center;
+    margin: 35px auto;
+  }
+  
+  figure img {
+    display: block;
+    width: auto;
+    max-width: 70%;
+    max-height: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* Fluxograma grande */
+  figure img[src*="Figure 14 Flash pT Calculation Algorithm"] {
+    width: 100%;
+    max-width: 550px;
+    max-height: none;
+  }
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Equações */
+.equation {
+    text-align: center;
+    margin: 25px 0;
+    overflow-x: auto;
+}
+
+/* Tabelas */
+table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: auto;
+    max-width: 100%;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+caption {
+  caption-side: top;   
+  text-align: center;  
+  white-space: nowrap; 
+  margin-bottom: 0.8em;
+}
+
+/* Exercícios */
+.exercise {
+    margin-bottom: 25px;
+}
+
+/* Referências */
+.references p {
+    text-align: left;
+}
+
+/* Links de referência (figuras/tabelas) */
+a[data-reference-type="ref"],
+/* Links de equações (MathJax) */
+mjx-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a[data-reference-type="ref"]:hover,
+mjx-container a:hover {
+  text-decoration: underline; /* efeito discreto no hover */
+}
+
+
+
+/* Rodapé */
+.footnotes {
+  font-size: 0.85em;       
+  color: #555; 
+  margin-top: 2em; 
+  border-top: 1px solid #ccc; 
+  padding-top: 1em;
+}
+
+.footnotes li {
+  margin-bottom: 0.8em; 
+  line-height: 1.4; 
+}
+
+/* Link de retorno (↩︎) */
+.footnote-back {
+  text-decoration: none;
+  color: #888;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+.footnote-back:hover {
+  color: #333;             
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .columns {
+        column-count: 1;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+
+    blockquote {
+        margin: 15px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}

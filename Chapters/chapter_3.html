@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="generator" content="pandoc 3.10.2" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chapter 3 - Seismic Exploration</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+    <!-- MathJax para renderizar as equações -->
+    <script>
+        window.MathJax = {
+            tex: {
+              inlineMath: [['\\(', '\\)']],
+              displayMath: [['\\[', '\\]']],
+              tags: 'ams', 
+              useLabelIds: true       
+            }
+        };
+    </script>
+
+    <script async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+</head>
+
+<body>
+    <h1 class="unnumbered" id="chapter-3-seismic-exploration">CHAPTER 3 SEISMIC EXPLORATION</h1>
+
+    <p>Oil exploration begins with geological and geophysical studies<sup id="fnref1"><a href="#fn1" role="doc-noteref">1</a></sup>
+    aimed at understanding the formation and transformations that have occurred on Earth, enabling the determination of locations conducive 
+    to the generation and accumulation of oil. The seismic method stands out as a tool to aid in this search.</p>
+
+    <h3>NOMENCLATURE</h3>
+    <div class="columns">
+        <ul>
+            <li>E - Young's Modulus</li>
+            <li>K - Bulk Modulus</li>
+            <li>\(c\) - Effective compressibility</li>
+            <li>\(\sigma\) - Stress</li>
+            <li>F - Force</li>
+            <li>A - Area</li>
+            <li>G - Shear Modulus</li>
+            <li>\(\nu\) - Poisson's ratio</li>
+            <li>\(v_p\) - P-wave velocity</li>
+            <li>\(v_s\) - S-wave velocity</li>
+            <li>\(v_f\) - Fluid pore velocity</li>
+            <li>\(v_m\) - Rock matrix velocity</li>
+            <li>\(v\) - Seismic wave propagation velocity in rock</li>
+            <li>\(K_0\) - Mineral bulk modulus</li>
+            <li>\(K_f\) - Fluid bulk modulus</li>
+            <li>\(K_d\) - Dry rock bulk modulus</li>
+            <li>\(K_s\) - Saturated rock bulk modulus</li>
+            <li>\(G_s\) - Saturated rock shear modulus</li>
+            <li>\(G_d\) - Dry rock shear modulus</li>
+            <li>\(\Delta K_d\) - Increase in bulk modulus due to fluid saturation</li>
+            <li>\(\omega_0\) - Natural frequency of undamped system</li>
+            <li>S - Laplace variable</li>
+            <li>\(\theta\) - Phase</li>
+            <li>c - Amplitude</li>
+            <li>C - Damping coefficient</li>
+            <li>\(\varepsilon\) - Damping factor</li>
+            <li>R - Reflection coefficient</li>
+            <li>X - Perturbation</li>
+            <li>Y - Reflection</li>
+            <li>h - Reflectivity</li>
+            <li>\(R_W\) - Electrical resistivity of water</li>
+            <li>\(m\) - Cementation coefficient</li>
+            <li>\(n\) - Saturation coefficient</li>
+            <li>TF - Formation Test</li>
+            <li>TFR - Cased hole formation test</li>
+            <li>TLD - Long duration test</li>
+            <li>ADR - Reservoir Data Acquisition</li>
+            <li>\(P_E\) - Static pressure</li>
+            <li>\(P_W\) - Well pressure</li>
+            <li>N - Original volume of hydrocarbons in reservoir</li>
+        </ul>
+    </div>
+    
+    <h2>3.1 GEOPHYSICS</h2>
+
+    <p>In the initial phase of exploration, those rock formations that outcrop on the surface as a result of anticline 
+    deformations and faults are mapped through aerial photographs.</p>
+
+    <p>From direct observations of rocks exposed on the surface or from samples taken from wells drilled for this purpose, studies are conducted 
+    on the original succession and age of stratified rocks, as well as their forms, distribution, lithology (chemical composition, density, porosity, 
+    etc.), and paleontological content (species of animals and plants), aiming to infer their environment of origin and geological history. Geologists 
+    often use the term facies to define physical aspects of rocks, such as stratum geometry, sedimentary structures, colors, and the fossils present. 
+    Stratigraphy is the branch of geology that deals with rock strata in time and space, studying their physical attributes and interpreting them in terms 
+    of their genesis and temporal arrangement. Stratigraphic charts are created to represent, in a didactic way, the chronology, lithology, etc.</p>
+
+    <p>However, rarely can an adequate evaluation of the subsurface (or technically more correct, the subsurface) be obtained by simply
+    extrapolating the characteristics of rocks found on the surface. Advances in geological knowledge of the subsurface are achieved through
+    the use of indirect methods based on measurements of the physical properties of rocks, such as seismic, gravimetric, and electromagnetic
+    methods, to interpret their results in geological terms. This activity is called geophysics, which can be defined as the "study of the Earth
+    using measurements of its physical properties."</p>
+
+    <p>Measurements of Earth's gravitational and magnetic fields are known as potential methods, and their 
+    intensities are related to the properties of subsurface rocks.</p>
+
+    <p>The differences in the densities of materials forming the Earth's interior cause different values of gravitational acceleration, g. These
+    variations are called gravimetric anomalies. The interpretation of gravimetric data is essentially the determination of an internal density
+    distribution that can explain the differences in measured gravity, that is, the observed anomaly. The mass of geological material, i.e., the
+    geological body that produces this gravimetric anomaly, is then modeled to determine its geometric characteristics (size, shape, and depth). The
+    gravimetric method allows estimates of the thickness of sediments in a sedimentary basin and indicates the presence of rocks with anomalous
+    densities, such as metamorphic rocks and salt domes.</p>
+
+    <p>Electromagnetic methods aim to measure small variations in the intensity of Earth's magnetic field, a consequence of the irregular
+    distribution of magnetized rocks in the subsurface. They measure electromagnetic properties of rocks, which are closely related to the
+    presence of fluids or metallic minerals. The variations in magnetic properties produced by different rocks can be compared, by analogy, with
+    the magnetite content (iron-based ore) in them. For example, it is known that silica-based rock formations have low magnetite content and
+    therefore present low magnetic susceptibility values.</p>
+
+    <h2>3.2 SEISMIC METHOD</h2>
+
+    <p>The basic principle of the seismic method involves measuring the propagation time and amplitude of pressure waves reflected at the
+    interface of different rock formation layers with the objective of mapping their structure. The reflection at the interface between rock
+    formations arises from the difference in their physical properties, particularly density. The seismic wavefront generated at a source (*)
+    propagates through the subsurface, as shown in <a href="#fig1" data-reference-type="ref" data-reference="fig1">Figure 1(a)</a>. The
+    reflection at a certain point causes part of the wave's energy to return to the surface. The ray is an alternative and very convenient
+    representation of the seismic wave's path. In <a href="#fig1" data-reference-type="ref" data-reference="fig1">Figure 1(b)</a>, we see the
+    reflected wavefront at a specific point on an interface towards the receiver, as well as the path of the corresponding ray. The recording of
+    the reflected signal is carried out by a device called a seismograph.</p>
+
+	<figure id="fig1" data-latex-placement="h">
+		<div style="display: flex; justify-content: center; gap: 1em;">
+			<div style="width: 48%; display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 1 (a) Seismic Wave Propagation.png" alt="Propagation (a)" style="width: 100%;" />
+				<span>(a)</span>
+			</div>
+			<div style="width: 48%; display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 1 (b) Seismic Wave Reflection.png" alt="Reflection (b)" style="width: 100%;" />
+				<span>(b)</span>
+			</div>
+		</div>
+		<figcaption>Figure 1: Seismic Wave: Propagation (a) and Reflection (b)</figcaption>
+	</figure>
+            
+    <p>An alternative representation of the ray is shown in <a href="#fig2" data-reference-type="ref" data-reference="fig2">Figure 2(a)</a>. In
+    <a href="#fig2" data-reference-type="ref" data-reference="fig2">Figure 2(b)</a>, we see the seismic signals of the reflections captured by
+    the receiver. Based on the time delay of these signals, it is possible
+    to infer the position of the interfaces.</p>
+
+    <figure id="fig2" data-latex-placement="h">
+		<div style="display: flex; justify-content: center; gap: 1em;">
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 2 (a) Reflected Seismic Ray Path.png" alt="Reflected Seismic Ray Path" />
+				<span>(a)</span>
+			</div>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 2 (b)  Signal Captured by the Receiver.png"  />
+				<span>(b)</span>
+			</div>
+		</div>
+        <figcaption>Figure 2: (a) Reflected Seismic Ray Path (b) Signal Captured by the Receiver</figcaption>
+    </figure>
+
+    <p>Note that reflections farther from the surface have progressively lower amplitudes. This occurs due to the spherical spreading of the
+    signal. This energy dissipation can be estimated, and the signal can be corrected to have the same amplitude as the others, as shown in 
+    <a href="#fig3" data-reference-type="ref" data-reference="fig3">Figure 3(a)</a>. By repeating this process at different positions, the set of 
+    reflections can be used to create a map of the subsurface structures. In <a href="#fig3" data-reference-type="ref" data-reference="fig3">Figure 3(b)</a> 
+    below, we see the result of a sequence of five seismic signals. Geologists often color the upper part of the waves black to facilitate visualization.</p>
+
+    <p>The types of sources and receivers vary according to the terrain
+    conditions being surveyed. The most commonly used seismic energy sources
+    on land are dynamite or vibrators. At sea, airguns are used, consisting
+    of compressed air inside a chamber that, when released into the sea,
+    generates pressure pulses.</p>
+
+    <h4>3.2.1 Rock Properties</h4>
+
+    <p>A seismic wave is a mechanical wave that propagates in a solid medium. The theory of seismic wave propagation is based on the classical
+    mechanics wave equation. Solutions to the wave equation can be obtained if we consider the medium to be homogeneous, isotropic, and elastic.</p>
+
+    <p>A rock is considered homogeneous if it is identical throughout its extent. It is assumed that dividing it into small pieces will retain its
+    physical and chemical properties. This is not true for sedimentary formations since their small structures are formed by rock fragments,
+    and the porous volume is occupied by fluids such as hydrocarbons and water.</p>
+    
+    <figure id="fig3" data-latex-placement="h">
+		<div style="display: flex; justify-content: center; gap: 1em;">
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 3 (a) Vertical Seismic Signal Reflection without coloring.png" alt="Vertical Seismic Signal Reflection (a) without coloring" /> 
+				<span>(a)</span>
+			</div>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 3 (b) Vertical Seismic Signal Reflection with coloring.png"  alt="Vertical Seismic Signal Reflection (b) with coloring" />
+				<span>(b)</span>
+			</div>
+		</div>
+        <figcaption>Figure 3: Vertical Seismic Signal Reflection (a) without coloring (b)  with coloring</figcaption>
+    </figure>
+
+
+    <p>A rock is isotropic if its physical properties remain the same in any direction. Since the propagation velocity of seismic waves depends on
+    the density of the medium, variations in this property will affect wave propagation. Oil-bearing rocks are anisotropic because they vary in
+    properties both horizontally and vertically.</p>
+
+    <p>There is no perfectly rigid body in nature. All materials undergo deformation to some extent, depending on the applied force. Deformations
+    in solids can be reversible or irreversible and depend on how the external force is applied.</p>
+
+    <p>Plastic deformation persists even after the forces that caused it are removed, while elastic deformation disappears once the forces are
+    withdrawn. Therefore, an elastic solid is one in which deformation is proportional to the applied stress. Stress is a force applied
+    perpendicular or parallel to the surface of the body, divided by the surface area: <span class="math inline">\(\sigma = \frac{F}{A}\)</span>
+    deformation is the change in dimensions caused by stress, per unit of the original dimension.</p>
+
+    <p>Hooke's law states that deforming forces are proportional to the elastic deformations produced:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    F = -Kx \label{eq:3.1}
+    \end{equation}\]</span></p>
+
+    <p>Next, we will look at some intrinsic properties of homogeneous and isotropic materials.</p>
+
+    <p><strong>Young's Modulus (E)</strong>. Also known as the modulus of elasticity, it is defined as the ratio of the force per unit area to the
+    rate of change in the solid's length per unit of length. It provides a measure of the stiffness of a solid material.</p>
+
+    <p><span class="math display">\[\begin{equation}
+    E = \frac{\frac{F}{A}}{\frac{\Delta \ell}{\ell}} =
+    \frac{\sigma}{\frac{\Delta \ell}{\ell}} \label{eq:3.2}
+    \end{equation}\]</span></p>
+
+    <p><strong>Bulk Modulus (K)</strong>. It is defined as the ratio of the normal force per unit area to the rate of change in volume per unit of
+    volume. It describes the tendency of a material to deform in all directions when subjected to uniform pressure 
+    (<a href="#fig4" data-reference-type="ref" data-reference="fig4">Figure 4</a>).</p>
+
+    <p><span class="math display">\[\begin{equation}
+    K = \frac{\frac{\Delta F}{A}}{\frac{\Delta V}{V}} = V \frac{\Delta
+    p}{\Delta V} \label{eq:3.3}
+    \end{equation}\]</span></p>
+
+    <p>In reservoir studies, it is important to understand how the rock formation expands or contracts under external forces (or pressure). In
+    this case, we adopt the <strong>effective compressibility of the formation</strong>, defined as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    c = -\frac{1}{V} \frac{\Delta V}{\Delta p} \label{eq:3.4}
+    \end{equation}\]</span></p>
+
+    <p>Note that this is the inverse of the bulk modulus <em>K</em>. The effective pore compressibility is defined as:</p>
+
+    <figure id="fig4" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 4 Bulk Modulus.png" alt="Bulk Modulus" />
+        <figcaption>Figure 4: Bulk Modulus</figcaption>
+    </figure>
+
+    <p><span class="math display">\[\begin{equation}
+    c_{p} = \frac{1}{V} \frac{\Delta V}{\Delta p} \label{eq:3.5}
+    \end{equation}\]</span></p>
+    
+    <p>Note that there is no negative sign, meaning that when pressure  decreases, the porous volume decreases, assuming c remains constant.</p>
+
+    <p><strong>Shear Modulus (G)</strong>. It deals with deformation caused by stress applied orthogonally to the surface where the force acts. The
+    resulting deformation is <span class="math inline">\(\frac{dx}{dy}\)</span> but it can be approximated by <span class="math inline">\(\theta\)</span> 
+    when this value is small (<a href="#fig5" data-reference-type="ref" data-reference="fig5">Figure 5</a>).</p>
+
+    <figure id="fig5" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 5 Shear Modulus.png" alt="Shear Modulus"/>
+        <figcaption>Figure 5: Shear Modulus</figcaption>
+    </figure>
+
+    <p><span class="math display">\[\begin{equation}
+    G = \frac{\frac{F}{A}} {\frac{dx}{dy}} = \frac{\frac{F}{A}}{\theta} =
+    \frac{\sigma}{\theta} \label{eq:3.6}
+    \end{equation}\]</span></p>
+
+    <p><strong>Poisson's Ratio (<span class="math inline">\(\sigma\)</span>)</strong>. It measures the
+    transverse deformation (relative to the longitudinal direction of load application).</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \sigma = -\frac{\frac{\Delta x}{x}}{\frac{\Delta y}{y}} \label{eq:3.7}
+    \end{equation}\]</span></p>
+
+    <p>The negative sign in Poisson's ratio is adopted because transverse and longitudinal deformations have opposite signs.</p>
+
+    <h4>3.2.2 Types of Seismic Waves</h4>
+
+    <p>There are four types of seismic waves. Two of these, P-waves and S-waves, are called body waves. The P-wave travels in the direction of propagation, 
+    while S-waves are generated by shear forces and, therefore, move orthogonally to P-waves. Their velocity is approximately half that of P-waves.</p>
+
+    <p>Surface waves occur at the interface between different materials. They are Rayleigh and Love waves. Rayleigh waves cause ellipsoidal
+    motion, similar to ocean waves on a beach, combining vertical and radial movement. They are important in land seismic studies as they are the
+    first to reach receivers and must be discarded during signal processing. Love waves propagate at a slower velocity than Rayleigh waves.</p>
+
+    <p>The propagation of P and S waves can be understood by imagining solids as a set of particles connected by springs (<a href="#fig6" data-reference-type="ref" data-reference="fig6">Figure 6</a>), 
+    as deformations are elastic, meaning forces act to restore the solid to its initial condition.</p>
+
+    <p>When subjected to an initial force, the transmission of pressure will be faster if the solid is less compressible (stiffer springs) and less dense.</p>
+
+    <p>The velocity of seismic wave propagation is a function of the bulk modulus 
+    <span class="math inline">\(K, \text{ shear modulus } G, \text{ and density } \rho\)</span>, 
+    or the elastic constants of the solid, as shown in the equations below. The equations can also be
+    written in terms of Young's modulus <span class="math inline">\(E \text{ and Poisson's ratio } \sigma\)</span>, 
+    as they are related to compression and shear forces.</p>
+
+    <p><span class="math display">\[\begin{equation}
+    v_{P} = \sqrt{\frac{K + \frac{4}{3}G}{\rho}} = \sqrt{\frac{E(1 +
+    \sigma)(1 - 2\sigma)}{\rho(1 - \sigma)}} \label{eq:3.8}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    v_{S} = \sqrt{\frac{E}{2\rho(1 + \sigma)}} \label{eq:3.9}
+    \end{equation}\]</span></p>
+
+    <p>Where</p>
+    <blockquote>
+        <p><span class="math inline">\({v}_{p}\)</span> = P-wave velocity</p>
+        <p><span class="math inline">\({v}_{S}\)</span> = S-wave velocity</p>
+    </blockquote>
+
+    <figure id="fig6" data-latex-placement="h">
+        <p style="text-align: center;">
+            <img src="../Figures/Chap 3/Figure 6 (a) Spring Set.jpeg" alt="Spring Set" /> 
+            <img src="../Figures/Chap 3/Figure 6 (b) P and S Wave Propagation.jpeg"  alt="P and S Wave Propagation" />
+        </p>
+        <figcaption>Figure 6: (a) Spring Set (b) P and S Wave Propagation</figcaption>
+    </figure>
+
+    <p>Note that although the equation indicates that velocity decreases with increasing density, in practice, denser rocks are also those with
+    higher elastic constants such as <em>K</em> and <em>G</em>. Dense and rigid rocks like gneiss or granite tend to have higher propagation
+    velocities compared to sedimentary rocks.</p>
+
+    <p><a href="#fig7" data-reference-type="ref" data-reference="fig7">Figure 7</a> shows wave propagation velocity values for different types of rocks. 
+    Note that at 5000 m/s, we may have shales, sandstones, limestones, salt, or dolomites.</p>
+
+    <figure id="fig7" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 7 Acoustic Wave Velocity Variation with Medium Density.jpg" alt="Acoustic  Wave Velocity Variation with Medium Density" />
+        <figcaption>Figure 7: Acoustic Wave Velocity Variation with Medium Density</figcaption>
+    </figure>
+
+    <p>The propagation velocity of seismic waves in sedimentary formations is affected by the porosity (amount of fluids in the pores) of the
+    rocks, as well as their compaction and cementation. Wyllie proposed the following equation for velocity as a function of porosity:</p>
+    
+    <p><span class="math display">\[\begin{equation}
+    \frac{1}{v} = \frac{(1 - \phi)}{v_{m}} + \frac{\phi}{v_{f}} \label{eq:3.10}
+    \end{equation}\]</span></p>
+
+    <p>Where:</p>
+    <blockquote>
+        <p><span class="math inline">\({v}_{f}\)</span> = velocity in the pore fluid</p>
+        <p><span class="math inline">\({v}_{m}\)</span> = velocity in the rock matrix</p>
+        <p><span class="math inline">\(\phi\)</span> = porosity</p>
+        <p><em>v</em> = seismic wave propagation velocity in the rock</p>
+    </blockquote>
+
+    <p>In sedimentary rocks, the grain bonding strength results from compaction over millions of years. This suggests that the age and depth
+    of the formation can be used to correlate this strength and, ultimately, the seismic wave velocity. However, it is necessary to know the
+    formation's burial history.</p>
+
+    <p><strong>Gassmann Equation.</strong></p>
+
+    <p>Gassmann (1951) sought to develop a formula that, based on the physical properties of rocks and fluids, could predict changes in
+    seismic wave velocity caused by fluid saturation changes. Several assumptions are involved in deriving and applying Gassmann's equation,
+    the main ones being:</p>
+
+    <ul>
+        <li><p>The porous material is isotropic, elastic, composed of a single mineral, and homogeneous.</p></li>
+        <li><p>The porous space is connected and in pressure equilibrium.</p></li>
+        <li><p>The medium is a closed system, meaning no movement of the fluid through its boundaries.</p></li>
+        <li><p>There is no chemical interaction between the fluids and the rock matrix (the shear modulus is constant).</p></li>
+    </ul>
+
+    <p>One form of Gassmann's equation is presented as:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+    K_{S} = K_{d} + \Delta K_{d}
+    \end{equation*}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation*}
+    \Delta K_{d} = \frac{K_{0}(1 - \frac{K_{d}}{K_{0}})^{2}}{1 - \phi -
+    \frac{K_{d}}{K_{0}} + \phi \frac{K_{d}}{K_{0}}}
+    \end{equation*}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation*}
+    G_{S} = G_{d}
+    \end{equation*}\]</span></p>
+
+    <p>Where:</p>
+    <blockquote>
+        <p><span class="math inline">\({K}_{0}\)</span> = bulk modulus of the mineral</p>
+        <p><span class="math inline">\({K}_{f}\)</span> = bulk modulus of the fluid</p>
+        <p><span class="math inline">\({K}_{d}\)</span> = bulk modulus of the dry rock</p>
+        <p><span class="math inline">\({K}_{S}\)</span> = bulk modulus of the saturated rock</p>
+        <p><span class="math inline">\({G}_{S}\)</span> = shear modulus of the saturated rock</p>
+        <p><span class="math inline">\({G}_{d}\)</span> = shear modulus of the dry rock</p>
+        <p><span class="math inline">\(\Delta K_{d}\)</span> = increase in bulk modulus resulting from fluid saturation in dry rock</p>
+    </blockquote>
+
+    <p>In most practical cases, many of these assumptions are not valid, such as anisotropy. Despite the limitations of Gassmann's equation, it
+    is the most widely used relation for calculating changes in seismic velocity for different fluid saturations in reservoirs. Brown and
+    Korringa (1975) worked on modifying the equation to account for anisotropy.</p>
+
+    <h4>3.2.3 Mathematical Representation of Reflection</h4>
+
+    <p>To correctly process seismic signals, it is necessary to understand how they propagate. Consider a geological structure composed of several
+    parallel, homogeneous layers of rock strata. To simplify the discussion, we initially look at the convolutional model for representing the
+    seismic signal <span class="math inline">\(s(t)\)</span>, resulting from the reflection of a wave <span class="math inline">\(w(t)\)</span> in
+    one of these layers.</p>
+
+    <p><span class="math display">\[\begin{equation}
+    s(t) = w(t) * r(t) + n(t) \label{eq:3.11}
+    \end{equation}\]</span></p>
+
+    <p>In this equation, <span class="math inline">\(w(t)\)</span> is the seismic signal from the source (wavelet), <span
+    class="math inline">\(r(t)\)</span> is the reflectivity, and <span class="math inline">\(n(t)\)</span> corresponds to noise. The
+    convolution operation is represented by <span class="math inline">\(*\)</span>. Let's assume for now that <span
+    class="math inline">\(n(t) = 0\)</span>. From the definition of convolution (see Appendix), we have:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    s(t) = w(t) * r(t) = \int_{-\infty}^{\infty} w(\tau) r(t - \tau) d\tau \label{eq:3.12}
+    \end{equation}\]</span></p>
+
+    <p>The convolution of an impulse by a wave results in a temporal shift and amplitude change, as shown in  
+    <a href="#fig8" data-reference-type="ref" data-reference="fig8">Figure 8</a>. This is a very convenient
+    property, which is why we seek to represent <span class="math inline">\(w(t) \text{ and } r(t)\)</span> 
+    in a form suitable for convolution.</p>
+
+    <figure id="fig8" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 8 Convolution of an Impulse with a Wavelet.png.png" alt="Convolution of an Impulse with a Wavelet" />
+        <figcaption>Figure 8: Convolution of an Impulse with a Wavelet</figcaption>
+    </figure>
+
+    <p>Seismic waves have various shapes, as illustrated in the figure below. In the mathematical literature, they are referred to as wavelets
+    (<a href="#fig9" data-reference-type="ref" data-reference="fig9">Figure 9</a>).</p>
+
+    <figure id="fig9" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 9 Wavelets.png" alt="Wavelets" />
+        <figcaption>Figure 9: Wavelets</figcaption>
+    </figure>
+
+    <p>There are various ways to mathematically represent a wavelet. Ricker derived the expression below from the Gaussian function:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    w(t) = \left(1 - 2\pi^{2} f^{2} t^{2}\right) e^{-\pi^{2} f^{2} t^{2}} \label{eq:3.13}
+    \end{equation}\]</span></p>
+
+    <p>Its shape can be modified by changing the frequency <span class="math inline">\(f\)</span>, as shown in 
+    <a href="#fig10" data-reference-type="ref" data-reference="fig10">Figure 10</a>, where the
+    corresponding Gaussian function is shown as a dashed line.</p>
+
+    <p>The fraction of energy reflected at the interface between surfaces of different lithologies is given by the reflection coefficient, which can
+    be estimated from the acoustic impedance defined as <span class="math inline">\(v \rho\)</span>, where <em>v</em> is the velocity of the P-wave and 
+    <span class="math inline">\(\rho\)</span> is the specific mass of the soil. For the simplified case of two lithologies in contact along a flat
+    surface, the reflection coefficient is defined as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    R = \frac{v_2{\rho }_2 - v_1{\rho }_1}{v_2{\rho }_2 + v_1{\rho }_1} \label{eq:3.14}
+    \end{equation}\]</span></p>
+
+    <figure id="fig10" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 10 Ricker Wavelet.png" alt="Ricker Wavelet" />
+        <figcaption>Figure 10: Ricker Wavelet</figcaption>
+    </figure>
+
+    <p>This coefficient relates the amount (power) of reflected energy to
+    the emitted energy. Note that the form in which the above equation was
+    written restricts the reflectivity values to the range <span
+    class="math inline">\(-1 &lt; R &lt; 1\)</span>.</p>
+
+    <p>Not all of the wave energy is reflected; part of it is transmitted.
+    The transmission coefficient indicates what fraction of the wave is
+    transmitted.</p>
+
+    <p><span class="math display">\[\begin{equation}
+    T = 1 - R \label{eq:3.15}
+    \end{equation}\]</span></p>
+Figura 10 Wavelet de Ricker
+    <p>To relate the fraction of reflected energy with the depth (<span
+    class="math inline">\({z}_{k}\)</span>) of the interface, reflectivity is
+    defined as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    r(z) = \sum_{k=1}^{n} R_{k} \delta (z+z_{k}) \label{eq:3.16}
+    \end{equation}\]</span></p>
+
+    <p>Where <span class="math inline">\(\delta (z+z_{k})\)</span> is the
+    Dirac delta function, and <span class="math inline">\({R}_{k}\)</span>
+    corresponds to the reflection coefficient of the k-th interface.
+    Reflectivity measures the relative contrast between impedances before
+    and after <span class="math inline">\({z}_{k}\)</span>.</p>
+
+    <p>Reflectivity is represented in depth and must be converted to time representation to be used in the convolution equation above. For the
+    vertical path, the double travel time of the reflection at the first reflector will be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_1 = 2 \frac{z_1}{v_1} \label{eq:3.17}
+    \end{equation}\]</span></p>
+
+    <p>Generalizing for k layers, we have:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_k = 2 \sum_{k=1}^{n} \frac{\Delta z_{k}}{v(z_{k})} \label{eq:3.18}
+    \end{equation}\]</span></p>
+
+    <p>Thus, reflectivity can be rewritten as a function of time:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    r(t) = \sum_{k=1}^{n} R_{k} \delta \left(t + t_{k}\right) \label{eq:3.19}
+    \end{equation}\]</span></p>
+
+    <p>Finally, the convolution equation for the seismic signal response becomes:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    s(t) = w(t) * \sum_{k=1}^{n} R_{k} \delta \left(t + t_{k}\right) =
+    \sum_{k=1}^{n} w(t) * R_{k} \delta \left(t + t_{k}\right) \label{eq:3.20}
+    \end{equation}\]</span></p>
+
+    <p><em><strong>Example</strong>. <a href="#fig11" data-reference-type="ref" data-reference="fig11">Figure 11(a)</a> shows the properties of
+    different underground layers as illustrated in <a href="#fig11" data-reference-type="ref" data-reference="fig11">Figure 11(b)</a>. Assuming
+    the source signal is a Ricker wavelet, estimate the form of the signal
+    captured at the receiver from vertical reflections.</em></p>
+    
+	<figure id="fig11" data-latex-placement="h">
+		<div style="display: flex; justify-content: center; align-items: center; gap: 1em;">
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 11 (a) Properties of different underground layers.png"
+					 alt="(a) Properties of different underground layers (b) Subsurface."
+					 style="height: 250px; width: auto;" />
+				<span>(a)</span>
+			</div>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img src="../Figures/Chap 3/Figure 11 (b) Subsurface.png"
+					 alt="(b) Subsurface."
+					 style="height: 250px; width: auto;" />
+				<span>(b)</span>
+			</div>
+		</div>
+		<figcaption>Figure 11: (a) Properties of different underground layers (b) Subsurface.</figcaption>
+	</figure>
+
+    <p><strong>Solution</strong>. Based on the data in <a href="#table1" data-reference-type="ref" data-reference="table 1">Table 1</a>, we can
+    determine the reflectivity of each interface and the double travel times
+    of the seismic wave reflections.</p>
+
+    <table id="table1">
+    <caption>Table 1: Data</caption>
+    <thead>
+        <tr>
+        <th><span class="math inline">\(z\)</span></th>
+        <th><span class="math inline">\(I\)</span></th>
+        <th><span class="math inline">\(v\)</span></th>
+        <th><span class="math inline">\(R\)</span></th>
+        <th><span class="math inline">\(t\)</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>0</td>
+        <td>1,5</td>
+        <td>3125</td>
+        <td></td>
+        <td>0</td>
+        </tr>
+        <tr>
+        <td>250</td>
+        <td>2,5</td>
+        <td>5000</td>
+        <td>0,25</td>
+        <td>0,16</td>
+        </tr>
+        <tr>
+        <td>550</td>
+        <td>1,5</td>
+        <td>3000</td>
+        <td>-0,25</td>
+        <td>0,28</td>
+        </tr>
+        <tr>
+        <td>700</td>
+        <td>2</td>
+        <td>4000</td>
+        <td>0,142857</td>
+        <td>0,38</td>
+        </tr>
+        <tr>
+        <td>1100</td>
+        <td>3</td>
+        <td>5000</td>
+        <td>0,2</td>
+        <td>0,58</td>
+        </tr>
+        <tr>
+        <td>1250</td>
+        <td>1,5</td>
+        <td>3333</td>
+        <td>-0,33333</td>
+        <td>0,64</td>
+        </tr>
+        <tr>
+        <td>1300</td>
+        <td>2,5</td>
+        <td></td>
+        <td>0,25</td>
+        <td>0,67</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p>In <a href="#fig12" data-reference-type="ref" data-reference="fig12">Figure 12(a)</a> below, we see the representation of impedance and
+    reflectivity in space and time for the vertical path. <a href="#fig12" data-reference-type="ref" data-reference="fig12">Figure 12(b)</a> shows
+    the seismograph reading, resulting from the convolution of the Ricker
+    wavelet with the reflectivity data and the sum of each response
+    according to the superposition principle.</p>
+
+    <figure id="fig12" data-latex-placement="h">
+    <img src="../Figures/Chap 3/Figure 12 (a) Reflectivity in Space and Time (b) Convolution.png" style="width:90.0%" />
+    <figcaption>Figure 12: (a) Reflectivity in Space and Time (b) Convolution</figcaption>
+    </figure>
+
+    <p>Therefore, the simulation shows that the seismograph reading will be
+    the sum of the individual responses, presented in <a href="#fig12" data-reference-type="ref" data-reference="fig12">Figure 12</a>. This
+    sequence is called a seismic trace. We simulated what would occur in a
+    seismograph, which is why it is called a synthetic seismic trace or
+    synthetic seismogram.</p>
+
+    <p>In seismic data processing, the trace in time is converted (migrated)
+    to depth so that there is a match with the reflectors found in the
+    geological formation (<a href="#fig13" data-reference-type="ref" data-reference="fig13">Figure 13</a>).</p>
+
+    <figure id="fig13" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 13 Seismic Data.jpg" alt="Seismic Data" />
+        <figcaption>Figure 13: Seismic Data</figcaption>
+    </figure>
+
+    <p>In the above example, the Ricker wavelet is a continuous function in
+    time. However, data acquisition is done digitally, so a more appropriate
+    representation of this process is through a discrete mathematical
+    equation. Below is the discrete version of the convolution, where <span
+    class="math inline">\(n \text{ and } m\)</span> are indices representing time.</p>
+
+    <p><span class="math display">\[\begin{equation}
+    s(n) = \sum_{m=-\infty}^{\infty} w(m) R(n-m) \label{eq:3.21}
+    \end{equation}\]</span></p>
+
+    <p>Consider, as an example, that the reflectivity of two zones is 1 and
+    0,5, and that the perturbation is a pulse with an amplitude of 1 at time
+    0 and amplitude -0,5 at time 1, that is, <span class="math inline">\(w(n) = (1, -0,5)\)</span>.</p>
+
+    <p>The response is obtained by applying the convolution equation, as
+    represented in <a href="#table2" data-reference-type="ref" data-reference="table 2">Table 2</a> below.</p>
+
+    <table id="table2">
+    <caption>Table 2</caption>
+    <thead>
+        <tr>
+        <th></th>
+        <th>1</th>
+        <th>-0,5</th>
+        <th></th>
+        <th></th>
+        <th>Response</th>
+        </tr>
+    <tbody>
+        <tr>
+        <td>0,5</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1*1 = 1</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>0,5</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td>1*0,5 - 0,5*1 = 0</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td>0,5</td>
+        <td>1</td>
+        <td></td>
+        <td>-0,5*0,5 = 0,25</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p>The response obtained is shown in  <a href="#fig14" data-reference-type="ref" data-reference="fig14">Figure 14</a>. 
+    The dashed lines are an interpretation of what the original signals may be. We do not know exactly what they are, but we can assume. 
+    It is clear that the higher the sampling frequency, the closer we will be to the true signal. Shannon developed the mathematical theory 
+    for the relationship between the sampling frequency and the signal that can be reconstructed, presenting its limitations.</p>
+
+    <figure id="fig14" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 14 Convolution.png" alt="Convolution" />
+        <figcaption>Figure 14: Convolution</figcaption>
+    </figure>
+
+    <p>There are practical situations where the perturbation <span
+    class="math inline">\(w(t)\)</span> generated by the seismic energy
+    source and the response <span class="math inline">\(s(t)\)</span> after
+    the signal reflection from the subsurface are known. The task is to
+    define where the interfaces reflecting the generated pulses are located.
+    This is a system identification problem; if we know the perturbation
+    <span class="math inline">\(w(t)\)</span> and the response <span
+    class="math inline">\(s(t)\)</span>, it is possible to determine the
+    reflectivity of different zones.</p>
+
+    <table id="table3">
+    <caption>Table 3</caption>
+    <thead>
+        <tr>
+        <th></th>
+        <th>1</th>
+        <th>-0,5</th>
+        <th></th>
+        <th>Impulse Response</th>
+        <th>Response</th>
+        </tr>
+    <tbody>
+        <tr>
+        <td><span class="math inline">\(R_{2}\)</span></td>
+        <td><span class="math inline">\(R_{1}\)</span></td>
+        <td></td>
+        <td></td>
+        <td><span class="math inline">\(R_{1}\)</span></td>
+        <td>1</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td><span class="math inline">\(R_{2}\)</span></td>
+        <td><span class="math inline">\(R_{1}\)</span></td>
+        <td></td>
+        <td><span class="math inline">\(R_{2} - 0,5R_{1}\)</span></td>
+        <td>0</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td></td>
+        <td><span class="math inline">\(R_{2}\)</span></td>
+        <td><span class="math inline">\(R_{1}\)</span></td>
+        <td><span class="math inline">\(-0,5R_{2}\)</span></td>
+        <td>-0,25</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p><em><strong>Example.</strong> Consider a system subject to a
+    perturbation <span class="math inline">\(w(t)\)</span> with the
+    following amplitude values (1, -0,5). If the response is an impulse (1,
+    0, 0,25), determine the reflectivity coefficients of the medium <span
+    class="math inline">\(R_{k}(t)\)</span>.</em></p>
+
+    <p><strong>Solution</strong> Applying the convolution, the following responses are obtained:</p>
+
+    <p>One way to solve the system above is by setting the derivative of the sum of the squared errors to zero. This is a technique known as least
+    squares solution, described in Chapter 11. The sum of the squared errors <span class="math inline">\(e\)</span> is given by:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    e = (R_{1} - 1)^{2} + \left(R_{2} - \frac{R_{1}}{2} \right)^{2} +
+    \left(- \frac{R_{2}}{2} + \frac{1}{4}\right)^{2} \label{eq:3.22}
+    \end{equation}\]</span></p>
+
+    <p>Differentiating and setting the result equal to zero yields two equations with two unknowns:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{5}{2} R_{1} - R_{2} = 2 \label{eq:3.23}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    -R_{1} + \frac{5}{2} R_{2} = \frac{1}{4} \label{eq:3.24}
+    \end{equation}\]</span></p>
+
+    <p>In matrix notation, we have:</p>
+    <p><span class="math display">\[\begin{pmatrix}
+    \frac{5}{2} &amp; -1 \\
+    -1 &amp; \frac{5}{2}
+    \end{pmatrix}
+    \begin{pmatrix}
+    R_{1} \\
+    R_{2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    2 \\
+    \frac{1}{4}
+    \end{pmatrix}\]</span></p>
+
+    <p><span class="math display">\[\begin{pmatrix}
+    R_{1} \\
+    R_{2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    \frac{5}{2} &amp; -1 \\
+    -1 &amp; \frac{5}{2}
+    \end{pmatrix}^{-1}
+    \begin{pmatrix}
+    2 \\
+    \frac{1}{4}
+    \end{pmatrix}\]</span></p>
+
+    <p><span class="math display">\[\begin{pmatrix}
+    R_{1} \\
+    R_{2}
+    \end{pmatrix}
+    = \frac{1}{21}
+    \begin{pmatrix}
+    10 &amp; 4 \\
+    4 &amp; 10
+    \end{pmatrix}
+    \begin{pmatrix}
+    2 \\
+    \frac{1}{4}
+    \end{pmatrix}\]</span></p>
+
+    <p><span class="math display">\[\begin{pmatrix}
+    R_{1} \\
+    R_{2}
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+    1 \\
+    0,5
+    \end{pmatrix}\]</span></p>
+
+    <p>Note that the solution was obtained by matrix inversion. For systems
+    with many data points, advanced computational algorithms are used for
+    such matrix inversions.</p>
+
+    <p>An alternative and convenient way to solve the problem above is
+    through the z-transform of a time series. This is the discrete version
+    of the Laplace transform. In this case, a polynomial in <span
+    class="math inline">\(z\)</span>, whose exponents correspond to the
+    sampling times, is adopted to represent the transfer functions. In the
+    <span class="math inline">\(z\)</span>-domain, the convolution of two
+    functions corresponds to the product of polynomials. Therefore, the
+    signal <span class="math inline">\(s(z)\)</span> will be the product of
+    <span class="math inline">\(w(z)\)</span> by <span
+    class="math inline">\(R(z)\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    s(z) = w(z) R(z) \label{eq:3.25}
+    \end{equation}\]</span></p>
+    <p>This is commonly represented by the flowchart in <a href="#fig15" data-reference-type="ref" data-reference="fig15">Figure 15</a>.</p>
+
+    <p>The representation in the <span
+    class="math inline">\(z\)</span>-domain of <span
+    class="math inline">\(w(z) \text{ and} s(z)\)</span> from the example above is:</p>
+
+    <figure id="fig15" data-latex-placement="h">
+    <img src="../Figures/Chap 3/Figure 15 Flowchart.png" style="width:3in;height:0.9in" />
+    <figcaption>Figure 15: Flowchart.</figcaption>
+    </figure>
+
+    <p><span class="math display">\[s(z) = 1 - \frac{1}{4} z^{2}\]</span></p>
+
+    <p><span class="math display">\[w(z) = 1 - \frac{1}{2} z\]</span></p>
+    <p>The determination of <span class="math inline">\(R(z)\)</span> is
+    done by dividing the transfer functions:</p>
+
+    <p><span class="math display">\[R(z) = \frac{s(z)}{w(z)} = \frac{1 -
+    \frac{1}{4} z^{2}}{1 - \frac{1}{2} z} = 1 + \frac{1}{2} z\]</span></p>
+
+    <p>The coefficients (1 and 0,5) of the polynomial <span
+    class="math inline">\(R(z)\)</span> correspond to the reflectivities
+    that were to be determined. The above procedure is the inverse of
+    convolution and is therefore known as deconvolution. It illustrates, in
+    a simplified way, an important step in the mathematical treatment of
+    signals and the importance of data processing algorithms in the quality
+    of seismic results.</p>
+
+    <p>In practice, the transmitted signal arrives at the seismograph
+    contaminated with noise. The flowchart below (<a href="#fig16" data-reference-type="ref" data-reference="fig16">Figure 16</a>) shows the
+    signal read by the seismograph \(y(z)\) as the sum of \(s(z)\) and noise \(n(z)\).</p>
+
+    <figure id="fig16" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 16 Signal Contamination.png" alt="Signal Contamination" />
+        <figcaption>Figure 16: Signal Contamination.</figcaption>
+    </figure>
+
+    <p>Assuming that the signal <span class="math inline">\(w(z)\)</span> is known, Wiener proposed a filter <span
+    class="math inline">\(H(z)\)</span> (<a href="#fig17" data-reference-type="ref" data-reference="fig17">Figure 17</a>) to reduce the squared
+    error between the signal generated by the filter <span class="math inline">\(\hat{w}(z)\)</span> and the initial wavelet <span
+    class="math inline">\(w(z)\)</span>:</p>
+
+    <p><span class="math display">\[e = w(z) - \hat{w}(z)\]</span></p>
+
+    <figure id="fig17" data-latex-placement="h">
+    <img src="../Figures/Chap 3/Figure 17 Wiener Filter.png" alt="Wiener Filter" />
+    <figcaption>Figure 17: Wiener Filter.</figcaption>
+    </figure>
+
+    <p>The construction of the Wiener filter follows reasoning similar to
+    the deconvolution seen above. The arguments can be found in various
+    publications (Openheimer).</p>
+
+    <p>The examples presented so far are educational and therefore very
+    simplified. They do not take into account various phenomena such as the
+    delay of rays reflected at different angles, energy dissipation, etc.
+    Continuing with the simplified approach, let us now look at the
+    mathematical foundations for correcting the delay in signal reflection
+    time.</p>
+
+    <h4>3.2.4 Reflection Time in Single-Layer Soil</h4>
+
+    <p>After the signal is emitted by the source, all receivers will receive
+    part of the energy propagated by these rays according to their
+    reflections. So far, we have seen the mathematical modeling to describe
+    vertical reflections. However, in seismic work, receivers receive
+    signals reflected at different angles.</p>
+
+    <p>It also happens that the same depth is recorded multiple times by different receivers. This multiplicity of records of the same interface
+    is called the common depth point (CDP). When the source and reflector are symmetrically arranged around the point, the seismic processing is
+    called the common mid-point (CMP). This is because the position on the x-axis of the arrival of the reflected signal will be halfway between
+    the source and the receiver, as shown in <a href="#fig18" data-reference-type="ref" data-reference="fig18">Figure 18</a>.</p>
+
+    <figure id="fig18" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 18 (a) CMP (b) Reflection Time for Different Receivers.png" alt="(a) CMP (b) Reflection Time for Different Receivers" />
+        <figcaption>Figure 18: (a) CMP (b) Reflection Time for Different Receivers</figcaption>
+    </figure>
+
+    <p>In <a href="#fig19" data-reference-type="ref" data-reference="fig19">Figure 19(a)</a> 
+    below, we see an example of CMP in seismic work carried out at sea. In red, we see ray paths reflecting at the same
+    point. In this case, the CDP is identical to the CMP. However, if the
+    reflector is not horizontal, the CMP will not be the same as the CDP, as
+    we can see in <a href="#fig19" data-reference-type="ref" data-reference="fig19">Figure 19(b)</a>.</p>
+
+    <figure id="fig19" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 19 (a) Marine Seismic (b) CMP and CDP.png" alt="(a) Marine Seismic (b) CMP and CDP"/>
+        <figcaption>Figure 19: (a) Marine Seismic (b) CMP and CDP</figcaption>
+    </figure>
+
+    <p>Despite the difference between CMP and CDP, the processing technique
+    for these signals is generally referred to as CDP. By averaging the
+    records, this technique allows for noise filtering, as they are random.
+    Additionally, CDP processing of this group of signals allows continuous
+    coverage of interfaces even when there are obstacles.</p>
+
+    <p>Below (<a href="#fig20" data-reference-type="ref" data-reference="fig20">Figure 20</a>), we see the signals observed by different
+    receivers, the time correction, and the result of stacking. By averaging the records, this technique allows noise filtering, as they are random.
+    Additionally, CDP processing of this group of signals allows continuous coverage of interfaces even when there are obstacles.</p>
+
+    <figure id="fig20" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 20 CDP Stacking.png" alt="CDP Stacking" />
+        <figcaption>Figure 20: CDP Stacking</figcaption>
+    </figure>
+
+    <p>Besides CDP corrections, the same signal measured by different receivers will experience delay even when dealing with the same
+    horizontal surface. Note that the further away the receiver, the more
+    delayed the signal arrives, as shown in  <a href="#fig21" data-reference-type="ref" data-reference="fig21">Figure 21</a>. Here, it is also
+    necessary to correct these signals to align them according to the depth of the reflecting surface.</p>
+
+    <figure id="fig21" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 21 Reflections (a) in Space (b) in Time.png" alt="Reflections (a) in Space (b) in Time" />
+        <figcaption>Figure 21: Reflections (a) in Space (b) in Time</figcaption>
+    </figure>
+
+    <p><strong>Travel Time.</strong> The travel time for a seismic wave to reflect off an interface at depth \(z\)
+    and return to the surface can be determined from the propagation velocity. For vertical reflection, the double travel 
+    time of the seismic signal is:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{0} = 2 \frac{x}{v} \label{eq:3.26}
+    \end{equation}\]</span></p>
+
+    <p>Considering that the source is positioned at the origin of the xz-axis and the receiver is positioned at z=0 and at any point \(x\), 
+    we can use Pythagoras' theorem to obtain:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t(x) = \frac{\sqrt{\left( \frac{x}{2} - 0 \right)^{2} + z^{2}}}{v} +
+    \frac{\sqrt{\left( x - \frac{x}{2} \right)^{2} + z^{2}}}{v} \label{eq:3.27}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    t(x) = \frac{\sqrt{x^{2} + 4z^{2}}}{v} \label{eq:3.28}
+    \end{equation}\]</span></p>
+
+    <p>This equation shows that the reflection of flat surfaces will appear
+    as a hyperbola, as seen in the figures above. Therefore, by estimating
+    <em>v</em> in the different layers, it is possible to make the necessary correction to the signal. From this
+    equation, it is possible to determine the reflection time of CMP or CDP signals.</p>
+
+    <p><strong>Snell's Law.</strong> So far, our discussion has focused on
+    the reflection process. However, refraction also needs to be considered.
+    It corresponds to the change in direction of waves as they pass from one
+    medium to another, as shown in <a href="#fig22" data-reference-type="ref" data-reference="fig22">Figure 22(a)</a> below. In 
+    <a href="#fig22" data-reference-type="ref" data-reference="fig22">Figure 22(b)</a>, we
+    see a representation of the seismic ray path in a medium with three
+    layers. Note that there is a relationship between the angle of
+    refraction and the difference in velocity between the media.</p>
+
+    <figure id="fig22" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 22 Path (a) Reflection and Refraction (b) in Three Distinct Media.jpg" alt="Path (a) Reflection and Refraction (b) in Three Distinct Media" />
+        <figcaption>Figure 22: Path: (a) Reflection and Refraction (b) in Three Distinct Media</figcaption>
+    </figure>
+
+    <p>Based on Fermat's principle, which states that the path of a ray will
+    be the one with the shortest travel time, it is possible to define the
+    relationship between the angles formed by the rays and their velocities.
+    This relationship is known as Snell's law.</p>
+
+    <p><strong>Snell's Law for the Reflected Ray.</strong> Consider a ray
+    with velocity <span class="math inline">\(v_1\)</span> that departs from
+    position <span class="math inline">\(A = (a_1, a_2)\)</span>, strikes
+    point <span class="math inline">\(X(x, 0)\)</span>, and is reflected to
+    point <span class="math inline">\(B(b_1, b_2)\)</span>, as shown in
+    <a href="#fig22" data-reference-type="ref" data-reference="fig22">Figure 22</a>.</p>
+
+    <figure id="fig23" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 23 Reflection Time.png" alt="Reflection Time" />
+        <figcaption>Figure 23: Reflection Time</figcaption>
+    </figure>
+
+    <p>Using Pythagoras' theorem, we can determine the times <span
+    class="math inline">\(t_{AX} \text{ and } t_{XB}\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{AX}(x) = \frac{\sqrt{(x - a_1)^{2} + a_{2}^{2}}}{v_1} \label{eq:3.29}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{XB}(x) = \frac{\sqrt{(b_1 - x)^{2} + b_{2}^{2}}}{v_1} \label{eq:3.30}
+    \end{equation}\]</span></p>
+
+    <p>The total time <span class="math inline">\(t(x)\)</span> is:</p>
+    <p><span class="math display">\[\begin{equation}
+    t(x) = t_{AX}(x) + t_{XB}(x) = \frac{\sqrt{(x - a_1)^{2} +
+    a_{2}^{2}}}{v_1} + \frac{\sqrt{(b_1 - x)^{2} + b_{2}^{2}}}{v_1} \label{eq:3.31}
+    \end{equation}\]</span></p>
+
+    <p>The point where reflection occurs, called the critical point <span
+    class="math inline">\(x_c\)</span>, is the one that minimizes the travel
+    time. To determine this point, we first need to calculate the derivative
+    of the time with respect to <span class="math inline">\(x\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{dt(x)}{dx} = \frac{(x - a_1)}{v_1 \sqrt{(x - a_1)^{2} + a_2^{2}}}
+    - \frac{(b_1 - x)}{v_1 \sqrt{(b_1 - x)^{2} + b_2^{2}}} \label{eq:3.32}
+    \end{equation}\]</span></p>
+
+    <p>Setting the derivative to zero, we obtain an expression for the
+    critical point <span class="math inline">\(x_c\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{(x_c - a_1)}{v_1 \sqrt{(x_c - a_1)^{2} + a_2^{2}}} = \frac{(b_1 -
+    x_c)}{v_1 \sqrt{(b_1 - x_c)^{2} + b_2^{2}}} \label{eq:3.33}
+    \end{equation}\]</span></p>
+
+    <p>Observing the figure above, it follows that:</p>
+    <p><span class="math display">\[\begin{equation}
+    \frac{\sin(\theta_1)}{v_1} = \frac{\sin(\theta_2)}{v_1} \label{eq:3.34}
+    \end{equation}\]</span></p>
+
+    <p>In this case, since the velocities are identical, the angles will also be equal.</p>
+
+    <p><strong>Snell's Law for the Transmitted (Refracted) Ray.</strong>
+    Consider a ray that departs from <span class="math inline">\(A = (a_1,
+    a_2)\)</span>, strikes point <span class="math inline">\(X(x,
+    0)\)</span>, and is transmitted to <span class="math inline">\(C(c_1,
+    c_2)\)</span>, as shown in <a href="#fig24" data-reference-type="ref" data-reference="fig24">Figure 24</a>.</p>
+
+    <figure id="fig24" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 24 Refraction Time.png" alt="Refraction Time" />
+        <figcaption>Figure 24: Refraction Time</figcaption>
+    </figure>
+
+    <p>The times <span class="math inline">\(t_{AX} \text{ and } t_{XC}\)</span> are:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{AX}(x) = \frac{\sqrt{(x - a_1)^{2} + a_2^{2}}}{v_1} \label{eq:3.35}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{XC}(x) = \frac{\sqrt{(c_1 - x)^{2} + c_2^{2}}}{v_2} \label{eq:3.36}
+    \end{equation}\]</span></p>
+
+    <p>The total time is:</p>
+    <p><span class="math display">\[\begin{equation}
+    t(x) = t_{AX}(x) + t_{XC}(x) = \frac{\sqrt{(x - a_1)^{2} +
+    a_2^{2}}}{v_1} + \frac{\sqrt{(c_1 - x)^{2} + c_2^{2}}}{v_2} \label{eq:3.37}
+    \end{equation}\]</span></p>
+
+    <p>Differentiating with respect to <span class="math inline">\(x\)</span>, we obtain:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{dt}{dx} = \frac{(x - a_1)}{v_1 \sqrt{(x - a_1)^{2} + a_2^{2}}} -
+    \frac{(c_1 - x)}{v_2 \sqrt{(c_1 - x)^{2} + c_2^{2}}} \label{eq:3.38}
+    \end{equation}\]</span></p>
+
+    <p>Setting the derivative to zero, we obtain the expression for the
+    critical point <span class="math inline">\(x_c\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{(x_c - a_1)}{v_1 \sqrt{(x_c - a_1)^{2} + a_2^{2}}} = \frac{(c_1 -
+    x_c)}{v_2 \sqrt{(c_1 - x_c)^{2} + c_2^{2}}} \label{eq:3.39}
+    \end{equation}\]</span></p>
+
+    <p>Observing the figure above, it follows that:</p>
+    <p><span class="math display">\[\begin{equation}
+    \frac{\sin(\theta_1)}{v_1} = \frac{\sin(\theta_2)}{v_2} \label{eq:3.40}
+    \end{equation}\]</span></p>
+
+    <h4>3.2.5 Reflection Time in Multi-Layered Soil</h4>
+
+    <p>The subsurface is composed of various layers, for which there are formulations for calculating the transit time adapted to different
+    geological models. For this, it is necessary to determine formulas that relate the reflection transit times to the distance from the sources to
+    the receivers. Next, we will analyze a medium with different homogeneous horizontal layers, each with its own velocity, as shown in 
+    <a href="#fig25" data-reference-type="ref" data-reference="fig25">Figure 25</a>.</p>
+
+    <figure id="fig25" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 25 Transit Time in Multi-Layered Horizontal Medium.png" alt="Transit Time in Multi-Layered Horizontal Medium" />
+        <figcaption>Figure 25: Transit Time in Multi-Layered Horizontal Medium</figcaption>
+    </figure>
+
+    <p>Starting from Snell's law:</p>
+    <p><span class="math display">\[\begin{equation}
+    \frac{\sin(\theta_1)}{v_1} = \frac{\sin(\theta_2)}{v_2} = ... =
+    \frac{\sin(\theta_n)}{v_n} = p \label{eq:3.41}
+    \end{equation}\]</span></p>
+
+    <p>The equalities allow us to define the constant \(p\), from which the following relation is
+    deduced:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \sin(\theta_k) = v_k pb\label{eq:3.42}
+    \end{equation}\]</span></p>
+
+    <p>The length of each ray trajectory can then be defined as:</p>
+    <p><span class="math display">\[\begin{equation}
+    \ell_k = \frac{\Delta z_k}{\cos(\theta_k)} = \frac{\Delta z_k}{\sqrt{1 -
+    \sin^2(\theta_k)}} = \frac{\Delta z_k}{\sqrt{1 - (v_k p)^2}} \label{eq:3.43}
+    \end{equation}\]</span></p>
+
+    <p>The total time <span class="math inline">\(t_T\)</span> will be:</p>
+    <p><span class="math display">\[\begin{equation}
+    t_T = \frac{2\ell_1}{v_1} + \frac{2\ell_2}{v_2} + ... +
+    \frac{2\ell_n}{v_n} \label{eq:3.44}
+    \end{equation}\]</span></p>
+
+    <p>Thus, the total time as a function of parameter \(p\) will be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_T(p) = \frac{2\Delta z_1}{v_1 \sqrt{1 - (v_1 p)^2}} + \frac{2\Delta
+    z_2}{v_2 \sqrt{1 - (v_2 p)^2}} + ... + \frac{2\Delta z_n}{v_n \sqrt{1 -
+    (v_n p)^2}} \label{eq:3.45}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_T(p) = \sum_{k=1}^{n}  \frac{2\Delta z_k}{v_k \sqrt{1 - (v_k p)^2}} \label{eq:3.46}
+    \end{equation}\]</span></p>
+
+    <p>For vertical reflection \(p = 0\), the total time \(t_0\) will be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_T(0) = \sum_{k=1}^{n} \frac{2\Delta z_k}{v_k} = t_0 \label{eq:3.47}
+    \end{equation}\]</span></p>
+
+    <p>Thus, the time for vertical reflection to travel through each layer <span class="math inline">\(t_{0,k}\)</span> will be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \Delta t_k(0) = \frac{2\Delta z_k}{v_k} = t_{0,k} \label{eq:3.48}
+    \end{equation}\]</span></p>
+
+    <p>The half-offset <span class="math inline">\(x\)</span> between the
+    source and the receiver can be expressed as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    x = \ell_1 \sin(\theta_1) + \ell_2 \sin(\theta_2) + ... + \ell_n
+    \sin(\theta_n) \label{eq:3.49}
+    \end{equation}\]</span></p>
+
+    <p>From equations \eqref{eq:3.42} and \eqref{eq:3.43}, this can be rewritten as a function
+    of <span class="math inline">\(p\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    x(p) = p \frac{v_1 \Delta z_1}{\sqrt{1 - (v_1 p)^2}} + \frac{v_2 \Delta
+    z_2}{\sqrt{1 - (v_2 p)^2}} + ... + \frac{v_n \Delta z_n}{\sqrt{1 - (v_n
+    p)^2}} \label{eq:3.50}
+    \end{equation}\]</span></p>
+
+    <p>The above equation is implicit in <span class="math inline">\(p\)</span>. Defining:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    q(p) = \sum_{k=1}^{n} \frac{v_k \Delta z_k}{\sqrt{1 - (v_k p)^2}} \label{eq:3.51}
+    \end{equation}\]</span></p>
+
+    <p>Then:</p>
+    <p><span class="math display">\[\begin{equation}
+    x(p) = p q(p) \label{eq:3.52}
+    \end{equation}\]</span></p>
+
+    <p>As with the derivation of Snell's law, we also need to find the relationship between the transit time 
+    <span class="math inline">\(t_T\)</span> and the offset <span class="math inline">\(x\)</span>. Since the above equation is not
+    explicit in <span class="math inline">\(p\)</span>, we can define a composed relation of the ray transit time of the form:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t(x) = t_T(p(x)) \label{eq:3.53}
+    \end{equation}\]</span></p>
+
+    <p>We can use the Taylor approximation to obtain an expression for the transit time as a function of the offset 
+    <span class="math inline">\(x\)</span>. Considering the Taylor series up to
+    the second-order term, we have a parabolic approximation for the transit time:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{parabolic}(x) = t(x_0) + \left. \frac{dt}{dx} \right|_{x=x_0} (x -
+    x_0) + \frac{1}{2} \left. \frac{d^2 t}{dx^2} \right|_{x=x_0} (x - x_0)^2 \label{eq:3.54}
+    \end{equation}\]</span></p>
+
+    <p>The approximation around <span class="math inline">\(x_0 = 0\)</span> leads to:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{parabolic}(x) = t(0) + \left. \frac{dt}{dx} \right|_{x=0} x +
+    \frac{1}{2} \left. \frac{d^2 t}{dx^2} \right|_{x=0} x^2 \label{eq:3.55}
+    \end{equation}\]</span></p>
+
+    <p>We see that when the offset is zero, <span class="math inline">\(x =
+    0\)</span> and <span class="math inline">\(p = 0\)</span>, so we define
+    <span class="math inline">\(t_0\)</span> as follows:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t(0) = t_T(p(0)) = t_T(0) = t_0 \label{eq:3.56}
+    \end{equation}\]</span></p>
+
+    <p>Thus, the equation can be rewritten as:</p>
+    <p><span class="math display">\[\begin{equation}
+    t_{parabolic}(x) = t_0 + \left. \frac{dt}{dx} \right|_{x=0} x +
+    \frac{1}{2} \left. \frac{d^2 t}{dx^2} \right|_{x=0} x^2 \label{eq:3.57}
+    \end{equation}\]</span></p>
+
+    <p>To determine <span class="math inline">\(\left. \frac{dt}{dx}
+    \right|_{x=0}\)</span>, we apply the chain rule to obtain:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{dt}{dx} \right|_{x=0} = \left. \frac{dt_T}{dp}
+    \right|_{p=0} \left. \frac{dp}{dx} \right|_{x=0} \label{eq:3.58}
+    \end{equation}\]</span></p>
+
+    <p>Since <span class="math inline">\(x = 0 \text{ implies } p = 0\)</span>, the derivative <span
+    class="math inline">\(\frac{dt_T}{dp}\)</span> is obtained from equation \eqref{eq:3.57}:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{dt_T}{dp} = 2p \sum_{k=1}^{n} \frac{v_k \Delta z_k}{\left[1 - (v_k
+    p)^2\right]^{3/2}} \label{eq:3.59}
+    \end{equation}\]</span></p>
+
+    <p>At <span class="math inline">\(p = 0\)</span>, the value is zero:</p>
+    <p><span class="math display">\[\left. \frac{dt_T}{dp} \right|_{p=0} = 0\]</span></p>
+    <p>Thus:</p>
+
+    <p><span class="math display">\[\left. \frac{dt}{dx} \right|_{x=0} =
+    \left. \frac{dt_T}{dp} \right|_{p=0} \left. \frac{dp}{dx} \right|_{x=0}
+    = 0\]</span></p>
+
+    <p>The parabolic time equation becomes:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{parabolic}(x) = t_0 + \frac{1}{2} \left. \frac{d^2 t}{dx^2}
+    \right|_{x=0} x^2 \label{eq:3.60}
+    \end{equation}\]</span></p>
+
+    <p>Now, we need to determine <span class="math inline">\(\left.
+    \frac{d^2 t}{dx^2} \right|_{x=0}\)</span>. Applying the chain rule, we obtain:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{d^2 t}{dx^2} \right|_{x=0} = \left. \frac{d^2 t_T}{dp^2}
+    \right|_{p=0} \left[\left( \left. \frac{dp}{dx} \right|_{x=0} \right)^2
+    +  \frac{dt_T}{dp} \right|_{p=0}
+    \frac{d^2p}{dx^2} \bigg|_{x=0}\bigg] \label{eq:3.61}
+    \end{equation}\]</span></p>
+
+    <p>How:</p>
+    <p><span class="math display">\[\begin{equation*}
+    \frac{dt_T}{dp} \bigg|_{p=0} = 0
+    \end{equation*}\]</span></p>
+
+    <p>The equation \eqref{eq:3.61} then becomes:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{d^2 t}{dx^2} \right|_{x=0} = \left. \frac{d^2 t_T}{dp^2}
+    \right|_{p=0}\bigg[\left( \left. \frac{dp}{dx} \right|_{x=0}
+    \right)^2\bigg] \label{eq:3.62}
+    \end{equation}\]</span></p>
+
+    <p>From equation \eqref{eq:3.59}, we deduce:</p>
+    <p><span class="math display">\[\begin{equation}
+    \frac{d^2 t_T}{dp^2} = 2 \sum_{k=1}^{n} \frac{v_k \Delta z_k}{\left[1 -
+    (v_k p)^2\right]^{3/2}} + 6p \sum_{k=1}^{n} \frac{v_k^3 \Delta
+    z_k}{\left[1 - (v_k p)^2\right]^{5/2}} \label{eq:3.63}
+    \end{equation}\]</span></p>
+
+    <p>At <span class="math inline">\(p = 0\)</span>, we have:</p>
+    <p><span class="math display">\[\begin{equation}
+        \left. \frac{d^2 t_T}{dp^2} \right|_{p=0} = 2 \sum_{k=1}^{n} v_k \Delta z_k \label{eq:3.64}
+    \end{equation}\]</span></p>
+
+    <p>Defining:</p>
+    <p><span class="math display">\[\begin{equation}
+    q_0 = q(0) = \sum_{k=1}^{n} v_k \Delta z_k \label{eq:3.65}
+    \end{equation}\]</span></p>
+
+    <p>Then:</p>
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{d^2 t_T}{dp^2} \right|_{p=0} = 2q_0 \label{eq:3.66}
+    \end{equation}\]</span></p>
+
+    <p>Now we only need to determine <span class="math inline">\(\frac{dp}{dx}\)</span>. Although there is no
+    explicit relation between <span class="math inline">\(p \text{ and } x\)</span>, applying the chain rule to <span
+    class="math inline">\(x(p) = p q(p)\)</span> (equation \eqref{eq:3.52} ) gives an implicit relation:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{dx}{dp} = p \frac{dq}{dp} + q \label{eq:3.67}
+    \end{equation}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation}
+    \frac{dp}{dx} = \frac{1}{q + p \frac{dq}{dp}} \label{eq:3.68}
+    \end{equation}\]</span></p>
+
+    <p>For <span class="math inline">\(x = 0\)</span>, this results in:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{dp}{dx} \right|_{x=0} = \frac{1}{q(0) + p(0) \left.
+    \frac{dq}{dp} \right|_{x=0}} = \frac{1}{q_0} \label{eq:3.69}
+    \end{equation}\]</span></p>
+
+    <p>Substituting into equation \eqref{eq:3.62}, we have:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \left. \frac{d^2 t}{dx^2} \right|_{x=0} = 2 \frac{1}{q_0} \label{eq:3.70}
+    \end{equation}\]</span></p>
+
+    <p>Finally, substituting into equation \eqref{eq:3.60}, we get:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{parabolic}(x) = t_0 + \frac{x^2}{q_0} \label{eq:3.71}
+    \end{equation}\]</span></p>
+
+    <p>Similar arguments (Portugal 2012) are used to derive the hyperbolic approximation, whose final expression is:</p>
+
+    <p><span class="math display">\[\begin{equation}
+    t_{hyperbolic}(x) = \sqrt{t_0^2 + \frac{4x^2}{\overline{v^2}}} \label{eq:3.72}
+    \end{equation}\]</span></p>
+
+    <p>Where <span class="math inline">\(\overline{v^2}\)</span> is the
+    weighted average of the square of the velocity, often referred to as RMS
+    (root mean square).</p>
+
+    <p><span class="math display">\[\begin{equation}
+    \overline{v^2} = \sqrt{\frac{\sum_{k=1}^{n} \Delta t_{0,k}
+    v_k^2}{\sum_{k=1}^{n} \Delta t_{0,k}}}  \label{eq:3.73}
+    \end{equation}\]</span></p>
+
+    <h4>3.2.6 Fourier Series.</h4>
+
+    <p>In a simplified way, the representation of a mass-spring system simulates the behavior of solid particles when subjected to a seismic
+    pulse. Consider a mass attached to a spring as shown in the figure below. Also, consider that after being pulled to a position <span
+    class="math inline">\(z_0\)</span>, the mass is released to oscillate (<a href="#fig26" data-reference-type="ref" data-reference="fig26">Figure 26</a>).</p>
+
+    <figure id="fig26" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 26 Mass-Spring System (a) without Damping and (b) with Damping.png" alt="Mass-Spring System (a) without Damping and (b) with Damping" />
+        <figcaption>Figure 26: Mass-Spring System (a) without Damping and (b) with Damping</figcaption>
+    </figure>
+
+    <p>According to Newton's second law <em>F = ma</em>, we have:</p>
+    <p><span class="math display">\[\begin{equation*}
+        m \frac{d^2 \ell}{dt^2} = mg - K \ell
+    \end{equation*}\]</span></p>
+
+    <p> At rest, <span class="math inline">\(mg = K\ell_0\)</span>:</p>
+    <p><span class="math display">\[\begin{equation*}
+        m \frac{d^2 \ell}{dt^2} = K\ell_0 - K\ell
+    \end{equation*}\]</span></p>
+
+    <p> Letting <span class="math inline">\(z = \ell - \ell_0\)</span>, then:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        m \frac{d^2 z}{dt^2} + Kz = 0 \label{eq:3.74}
+    \end{equation}\]</span></p>
+
+    <p>The above equation is called homogeneous since its right-hand side is
+    zero. By applying the Laplace transform<sup id="fnref2"><a href="#fn2" role="doc-noteref">2</a></sup> we
+    obtain the following characteristic equation:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        ms^2 + K = 0
+    \end{equation*}\]</span></p>
+
+    <p>Where <span class="math inline">\(s\)</span> is the Laplace variable. The roots of this equation are:</p>
+    <p><span class="math display">\[\begin{equation*}
+        s_{1,2} = \pm i \sqrt{\frac{m}{K}} = \pm i\omega_0
+    \end{equation*}\]</span></p>
+
+    <p>Where <span class="math inline">\(\omega_0 = \sqrt{\frac{K}{m}}\)</span> is called the natural frequency of the
+    undamped system. The solution to the above equation is obtained by the sum of the exponentials:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        z_h(t) = A_1 e^{s_1 t} + A_2 e^{s_2 t}
+    \end{equation*}\]</span></p>
+
+    <p>Or equivalently: <span
+    class="math display">\[\begin{equation*}
+        z_h(t) = A_1 e^{i\omega_0 t} + A_2 e^{-i\omega_0 t}
+    \end{equation*}\]</span></p>
+
+    <p>Where <span class="math inline">\(A_1 \text{ and } A_2\)</span> are constants, and the subscript
+    <span class="math inline">\(h\)</span> indicates that this is the solution to a homogeneous differential equation. Assuming the initial
+    conditions (at <span class="math inline">\(t = 0\)</span>) that the mass is at a position <span class="math inline">\(z_0\)</span> away from
+    equilibrium, and that the velocity is <span class="math inline">\(v_0\)</span>, then:</p>
+
+    <p><span
+    class="math display">\[\begin{equation*}
+        z_h(0) = z_0
+    \end{equation*}\]</span></p>
+
+    <p><span class="math display">\[\begin{equation*}
+        \left. \frac{dz_h}{dt} \right|_{t=0} = v_0
+    \end{equation*}\]</span></p>
+
+    <p>Applying these conditions to the equation for <span class="math inline">\(z_h(t)\)</span>, we obtain:</p>
+
+    <p>
+        <span class="math display">\[\begin{equation*}
+            A_1 + A_2 = z_0
+        \end{equation*}\]</span> 
+
+        <span class="math display">\[\begin{equation*}
+            A_1 - A_2 = \frac{v_0}{i\omega_0}
+        \end{equation*}\]</span>
+    </p>
+
+    <p>From this, we conclude: <span
+    class="math display">\[\begin{equation*}
+        A_1 = \frac{z_0}{2} + \frac{v_0}{i\omega_0}, \quad A_2 =
+    \frac{z_0}{2} - \frac{v_0}{i\omega_0}
+    \end{equation*}\]</span></p>
+
+    <p>Substituting into <span class="math inline">\(z_h(t)\)</span>:</p>
+
+    <p>
+        <span class="math display">\[\begin{equation*}
+            z_h(t) = \left( \frac{z_0}{2} + \frac{v_0}{i\omega_0} \right) e^{i\omega_0 t} + 
+            \left( \frac{z_0}{2} - \frac{v_0}{i\omega_0} \right) e^{-i\omega_0 t}
+        \end{equation*}\]</span> 
+        <span class="math display">\[\begin{equation*}
+            z_h(t) = \frac{z_0}{2} \left( e^{i\omega_0 t} - e^{-i\omega_0 t} \right) + 
+            \frac{v_0}{i\omega_0} \left( e^{i\omega_0 t} - e^{-i\omega_0 t} \right)
+        \end{equation*}\]</span>
+    </p>
+
+    <p>Using Euler's relation <span class="math inline">\(e^{i\theta} = \cos\theta + i\sin\theta\)</span>,
+    we convert the exponentials into cosines:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = z_0 \cos(\omega_0 t) + \frac{v_0}{\omega_0} \sin(\omega_0 t) \label{eq:3.75}
+    \end{equation}\]</span></p>
+
+    <p>Which can be rewritten using the relationship between sines and cosines:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        a \cos(\omega_0 t) + b \sin(\omega_0 t) = c \cos(\omega_0 t + \theta) \label{eq:3.76}
+    \end{equation}\]</span></p>
+
+    <p>Where: <span
+    class="math display">\[\begin{equation*}
+        \tan\theta = -\frac{b}{a}
+    \end{equation*}\]</span> And: <span
+    class="math display">\[\begin{equation*}
+        c = \sqrt{a^2 + b^2}
+    \end{equation*}\]</span></p>
+
+    <p>Thus, the system's response will be:</p>
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = c \cos(\omega_0 t + \theta) \label{eq:3.77}
+    \end{equation}\]</span></p>
+
+    <p>Where: <span class="math display">\[\begin{equation*}
+        \tan\theta = -\frac{v_0}{\omega_0z_0}
+    \end{equation*}\]</span> And: <span
+    class="math display">\[\begin{equation*}
+        c = \sqrt{z_0^2 + \bigg(\frac{v_0}{\omega_0}\bigg)^2}
+    \end{equation*}\]</span></p>
+
+    <p>We see that the response of the system without perturbation (homogeneous) and without damping is a periodic function called harmonic
+    oscillation. Since it does not have damping, the system will oscillate indefinitely, which is an idealization.</p>
+
+    <p>If we redo the exercise above with an initial velocity of zero, <span class="math inline">\(v_0 = 0\)</span>, the response will be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = \frac{z_0}{2} \left( e^{i\omega_0 t} + e^{-i\omega_0 t}
+    \right) = z_0 \cos(\omega_0 t) \label{eq:3.78}
+    \end{equation}\]</span></p>
+
+    <p>When <span class="math inline">\(v_0\)</span> is different from zero,
+    the values of <span class="math inline">\(\theta \text{ (phase) and } c\)</span> (amplitude) will change, altering
+    the shape of the response as shown in <a href="#fig27" data-reference-type="ref" data-reference="fig27">Figure 27</a>.</p>
+
+    <figure id="fig27" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 27 Homogeneous System Response.jpg" alt="Homogeneous System Response" />
+        <figcaption>Figure 27: Homogeneous System Response</figcaption>
+    </figure>
+
+    <p>Note that the responses are out of phase with each other.</p>
+    <p>In practical terms, we must consider that all systems have damping. Now consider the mass attached to a plate of negligible mass, immersed
+    in a fluid that only resists motion, as shown in <a href="#fig26" data-reference-type="ref" data-reference="fig26">Figure 26 (b)</a>. In this
+    case, the force balance leads to:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        m\frac{d^2 z}{dt^2} + C\frac{dz}{dt} + Kz = 0 \label{eq:3.79}
+    \end{equation}\]</span></p>
+
+    <p>Where <span class="math inline">\(C\)</span> is called the damping
+    coefficient. By applying the Laplace transform, we obtain the following
+    characteristic equation: <span class="math display">\[\begin{equation*}
+        ms^2 + Cs + K = 0
+    \end{equation*}\]</span> The roots of this equation are: <span
+    class="math display">\[\begin{equation*}
+        s_{1,2} = -\frac{C}{2m} \pm \frac{1}{2m} \sqrt{C^2 - 4mK} =
+    -\frac{C}{2m} \pm \sqrt{\frac{C^2}{4m^2} - \frac{K}{m}}
+    \end{equation*}\]</span></p>
+
+    <p>Note that depending on the values of <span class="math inline">\(m, C, \text{ and } K\)</span>, we will have three types of responses:
+    identical real roots, different real roots, and complex roots. We will  have identical roots when:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        \sqrt{\frac{C^2}{4m^2} - \frac{K}{m}} = 0
+    \end{equation*}\]</span></p>
+
+    <p>This condition is known as "critical damping," where:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        C_{\text{critical}} = 2\sqrt{Km}
+    \end{equation*}\]</span></p>
+
+    <p>The relationship between the system's damping <span class="math inline">\(C\)</span> and the critical damping <span
+    class="math inline">\(C_{\text{critical}}\)</span> is called the damping factor <span class="math inline">\(\xi\)</span>:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        \xi = \frac{C}{C_{\text{critical}}} = \frac{C}{2\sqrt{Km}} \label{eq:3.80}
+    \end{equation}\]</span></p>
+
+    <p>It is a measure of the degree of damping in a system. Both the
+    characteristic equation and its roots can be rewritten in terms of <span
+    class="math inline">\(\xi\)</span> and <span
+    class="math inline">\(\omega_0\)</span> (the natural frequency of the
+    undamped system):</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        \frac{m}{K} s^2 + \frac{C}{K} s + 1 = 0
+    \end{equation*}\]</span></p>
+
+    <p>Based on the definitions of <span class="math inline">\(\xi = \frac{C}{2\sqrt{Km}}\)</span> and <span
+    class="math inline">\(\omega_0 = \sqrt{\frac{K}{m}}\)</span>, we have:</p>
+
+    <p><span class="math display">\[\begin{equation*}
+        \frac{1}{\omega_0^2} s^2 + \frac{2\xi}{\omega_0} s + 1 = 0
+    \end{equation*}\]</span> The roots are: <span
+    class="math display">\[\begin{equation*}
+        s_{1,2} = -\xi \omega_0 \pm \omega_0 \sqrt{\xi^2 - 1}
+    \end{equation*}\]</span></p>
+
+    <p>We have three distinct situations: identical real roots <span
+    class="math inline">\(\xi = 1\)</span>, different real roots <span
+    class="math inline">\(\xi &gt; 1\)</span>, and complex conjugate roots
+    <span class="math inline">\(\xi &lt; 1\)</span>.</p>
+
+    <p>For <span class="math inline">\(\xi = 1\)</span>:</p>
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = (A_1 + A_2 t) e^{-\omega_0 t} \label{eq:3.81}
+    \end{equation}\]</span></p>
+
+    <p>For <span class="math inline">\(\xi &gt; 1\)</span>: </p>
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = e^{-\xi \omega_0 t} \left( A_1 e^{\omega_0 \sqrt{\xi^2 - 1}
+        t} + A_2 e^{-\omega_0 \sqrt{\xi^2 - 1} t} \right) \label{eq:3.82}
+    \end{equation}\]</span></p>
+
+    <p>For <span class="math inline">\(\xi &lt; 1\)</span>:</p>
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = e^{-\xi \omega_0 t} \left( A_1 e^{i\omega_0 \sqrt{1 -
+        \xi^2} t} + A_2 e^{-i\omega_0 \sqrt{1 - \xi^2} t} \right) \label{eq:3.83}
+    \end{equation}\]</span></p>
+
+    <p>Where <span class="math inline">\(\omega_0 \sqrt{\xi^2 - 1} = i \omega_0 \sqrt{1 - \xi^2}\)</span>.</p>
+
+    <p>We conclude that a system with <span class="math inline">\(\xi &gt;
+    1\)</span> is over-damped and will have a non-oscillatory response. A
+    system with <span class="math inline">\(\xi &lt; 1\)</span> has little
+    damping (is under-damped) and will have an oscillatory response. When
+    <span class="math inline">\(\xi = 1\)</span>, we are at the boundary
+    between these two situations, known as critical damping.</p>
+
+    <p>The case where <span class="math inline">\(\xi &lt; 1\)</span> is of
+    most practical interest and will be examined in greater detail. As in
+    the undamped system, where <span class="math inline">\(\omega_0\)</span>
+    was defined as the natural frequency, it is intuitive to define the
+    natural frequency of the damped system as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        \omega_d = \omega_0 \sqrt{1 - \xi^2} \label{eq:3.84}
+    \end{equation}\]</span></p>
+
+    <p>Note that if there is no damping (C= \(0\) ), then <span
+    class="math inline">\(\xi = 0 \text{ and } \omega_d = \omega_0\)</span>. We can then rewrite
+    the equation as:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = e^{-\xi \omega_0 t} \left( A_1 e^{i \omega_d t} + A_2 e^{-i \omega_d t} \right) \label{eq:3.85}
+    \end{equation}\]</span></p>
+
+    <p>The combination of exponentials <span class="math inline">\(e^{-\xi
+    \omega_0 t + \omega_d t}\)</span> and <span
+    class="math inline">\(e^{-\xi \omega_0 t - \omega_d t}\)</span> can be
+    converted into sines and cosines using Euler's relation:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = e^{-\xi \omega_0 t} \left( a \cos(\omega_d t) + b \sin(\omega_d t) \right) \label{eq:3.86}
+    \end{equation}\]</span></p>
+
+    <p>The constants can be determined from the initial conditions of the
+    problem, similarly to the undamped case. In this case, too, the
+    homogeneous solution is obtained using the relation between cosines and sines:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_h(t) = c e^{-\xi \omega_0 t} \cos(\omega_d t + \theta) \label{eq:3.87}
+    \end{equation}\]</span></p>
+
+    <p>Equation \eqref{eq:3.87} indicates that the response corresponds to a cosine
+    oscillation <span class="math inline">\(\cos(\omega_d t +
+    \theta)\)</span>, phase-shifted by <span
+    class="math inline">\(\theta\)</span> degrees, which decays <span
+    class="math inline">\(\left( e^{-\xi \omega_0 t} \right)\)</span> to
+    zero over time, i.e., a transient response, as shown in  <a href="#fig28" data-reference-type="ref" data-reference="fig28">Figure 28</a>. Note
+    that <span class="math inline">\(\xi\omega_d\)</span> will always be
+    positive since C, K, and m are positive quantities.</p>
+
+    <figure id="fig28" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 28 Transient Response.png" alt="Transient Response"/>
+        <figcaption>Figure 28: Transient Response</figcaption>
+    </figure>
+
+    <p>Comparing the roots of the characteristic equations of the problems
+    with and without damping, we see that as <span
+    class="math inline">\(C\)</span> decreases, the frequency <span
+    class="math inline">\(\omega\)</span> tends to the natural frequency of
+    the system <span class="math inline">\(\omega_0\)</span>.</p>
+
+    <p><em><strong>Example</strong>. Consider a mass-spring system with
+    <span class="math inline">\(m = 10 \text{kg, } K = 1.000 \, {kg/s}^2\)</span>. Determine its
+    response after pulling the weight to 5 meters below its equilibrium
+    position (<span class="math inline">\(z_0 = 5 m\)</span>) and
+    with <span class="math inline">\(v_0 = 0\)</span>. Consider three
+    different situations:</em></p>
+
+    <p><span class="math inline">\(C = 0\)</span></p>
+    <p><span class="math inline">\(C = 100\)</span></p>
+    <p><span class="math inline">\(C = 300\)</span></p>
+
+    <p><strong>Solution</strong>: Since <span class="math inline">\(v_0 = 0, \theta = 0\)</span>.</p>
+    <p>For <span class="math inline">\(C = 0,\omega_0 = 10 \, \text{rad/s, }\xi = 0, z_k(t) = 5 \cos(10t)\)</span></p>
+    <p>For <span class="math inline">\(C = 100,\omega_d = 8,66 \, \text{rad/s, } \xi = 0,5, z_h(t) = e^{-4,33t} 5 \cos(8,66t)\)</span></p>
+    <p>For <span class="math inline">\(C = 300, \omega_0 = 10 \, \text{rad/s, } \xi = 1,5, z_h(t) = e^{-15t} \left(5,854 e^{11,18 t} - 0,854 e^{-11,18 t}\right)\)</span></p>
+
+    <figure id="fig29" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 29 Response of the Mass-Spring System.png" alt="Response of the Mass-Spring System" />
+        <figcaption>Figure 29: Response of the Mass-Spring System</figcaption>
+    </figure>
+
+    <p>The cases above correspond to free motion, without any external force
+    acting on the body. To associate this problem with a practical case,
+    such as a ship subjected to ocean waves, we can initially assume that
+    these waves are represented by a sinusoidal wave of the type <span
+    class="math inline">\(F \cos(\omega t)\)</span>. In this way, the
+    differential equation becomes:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        m \frac{d^2 z}{dt^2} + C \frac{dz}{dt} + Kz = F \cos(\omega t) \label{eq:3.88}
+    \end{equation}\]</span></p>
+
+    <p>The solution to the differential equation is given by the sum of the
+    homogeneous solution <span class="math inline">\(z_h(t)\)</span> and a
+    particular solution <span class="math inline">\(z_p(t)\)</span>. We
+    already have the homogeneous solution, now we need a particular
+    solution. Since it is intuitive to believe that the system will respond
+    by oscillating at the same frequency as the perturbation, a particular
+    solution would be:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z_p(t) = c \cos(\omega t + \theta) \label{eq:3.89}
+    \end{equation}\]</span></p>
+
+    <p>Substituting into the differential equation, we verify that this is
+    indeed a particular solution, and we can determine <span
+    class="math inline">\(c \text{ and } \theta\)</span> as follows:</p>
+
+    <p>
+        <span class="math display">\[\begin{equation*}
+            c = \frac{F}{\sqrt{m^2 (\omega_0^2 - \omega^2)^2 + \omega^2 C^2}}
+        \end{equation*}\]</span> and <span
+        class="math display">\[\begin{equation*}
+            \tan \theta = \frac{\omega C}{m(\omega_0^2 - \omega^2)}
+        \end{equation*}\]</span>
+    </p>
+
+    <p>Finally, the solution for the system is:</p>
+    <p><span class="math display">\[\begin{equation}
+        z(t) = z_h(t) + z_p(t) = e^{-\alpha t} \left(a \cos(\omega t) + b
+        \sin(\omega t)\right) + c \cos(\omega t + \theta) \label{eq:3.90}
+    \end{equation}\]</span></p>
+
+    <p>Since the first term on the right tends to zero over time, after this
+    transient period the system will oscillate continuously as <span
+    class="math inline">\(c \cos(\omega t + \theta)\)</span>. This is called
+    the "steady-state response," which is of interest in many practical
+    cases. The constants <span class="math inline">\(c\)</span> and <span
+    class="math inline">\(\theta\)</span> can be determined from <span
+    class="math inline">\(F, m,\omega_0 \text{, and } C\)</span>.</p>
+
+    <p>We conclude that an underdamped system (<span
+    class="math inline">\(\xi &lt; 1\)</span>) subjected to a perturbation
+    <span class="math inline">\(F \cos(\omega t)\)</span> will have a
+    steady-state response:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        z(t) = c \cos(\omega t + \theta) \label{eq:3.91}
+    \end{equation}\]</span></p>
+
+    <p>represented by <a href="#fig30" data-reference-type="ref" data-reference="fig30">Figure 30</a>.</p>
+
+    <figure id="fig30" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 30 System Response With Ksi 0 Subject To Fcos(wt).png" alt="Response of the System with ξ < 1 subjected to F cos(ωt)" />
+        <figcaption>Figure 30: Response of the System with <span class="math inline">\(\xi &lt; 1\)</span> subjected to <span class="math inline">\(F \cos(\omega t)\)</span></figcaption>
+    </figure>
+
+    <p><strong>Fourier Series</strong></p>
+    <p>The Ricker wavelet is a very simplified representation of seismic
+    waves. These waves undergo several distortions during their propagation.
+    To determine the position of reflectors, there are mathematical tools
+    based on the theory of wave propagation in solid media that analyze
+    field data very conveniently. These are the Fourier series.</p>
+
+    <p>The representation of the perturbation as a sinusoidal wave is an idealization. In practice, periodic oscillations may appear as in 
+    <a href="#fig31" data-reference-type="ref" data-reference="fig31">Figure 31</a>.</p>
+
+    <figure id="fig31" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 31 Periodic Function.png" alt="Periodic Function"/>
+        <figcaption>Figure 31: Periodic Function</figcaption>
+    </figure>
+
+    <p>Jean Baptiste Fourier showed that it is possible to represent
+    periodic functions by combining sinusoidal functions<sup id="fnref3"><a href="#fn3" role="doc-noteref">3</a></sup>
+    (<span class="math inline">\(\cos(\omega t)\) and \(\sin(\omega t)\)</span>) called harmonic oscillations
+    with frequencies equal to integer multiples of the frequency \(\omega_0\).</p>
+
+    <p><span class="math display">\[\begin{equation}
+        f(t) = a_0 + \sum_{n=1}^{\infty} \left( a_n \cos(nt) + b_n \sin(nt) \right) \label{eq:3.92}
+    \end{equation}\]</span></p>
+
+    <p>This is the additive property of linear systems, where the response
+    to a combination of sinusoidal perturbations is the sum of the
+    individual responses.</p>
+
+    <p>Therefore, if the perturbation is not a cosine or sine function but a
+    periodic function with a fundamental frequency \(\omega_0\), the system's response will be
+    the sum of the individual responses. This property of Fourier series
+    allows various engineering problems to be solved.</p>
+
+    <p>Consider the result of summing different sinusoidal functions (<a href="#fig32" data-reference-type="ref" data-reference="fig32">Figure 32</a>) 
+    of the type cos(<span class="math inline">\(k \omega t\)</span>) presented in the figure below. The following shows the sum of sinusoids
+    for (a) <span class="math inline">\(k=1..3 \text{, (b) } k=1..6 \text{, and (c) } k=1..9\)</span>.</p>
+
+    <figure id="fig32" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 32 Sum of Sinusoidal Functions.png" alt="Sum of Sinusoidal Functions" />
+        <figcaption>Figure 32: Sum of Sinusoidal Functions</figcaption>
+    </figure>
+
+    <p>Periodic signals of different shapes can be represented in this manner. For the specific case of seismology, it is interesting to
+    observe that as we add sine waves, there is a tendency to form a peak at <em>t = 0</em> and others increasingly
+    distant, as shown in the figure above. In the limit, when the number of sine waves and their frequencies approach infinity, the lateral peaks
+    move to infinity, and only one peak remains at <em>t = 0</em>. In other words, although Fourier's
+    work originated from the representation of periodic signals, it can also be used to represent non-periodic signals, such as a pressure pulse
+    generated in seismic work (wavelet), as shown in <a href="#fig33" data-reference-type="ref" data-reference="fig33">Figure 33</a>.</p>
+
+    <figure id="fig33" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 33 Pulse Representation in Frequency vs. Time.png" alt="Pulse Representation in Frequency vs. Time" />
+        <figcaption>Figure 33: Pulse Representation in Frequency vs. Time</figcaption>
+    </figure>
+
+    <p>To facilitate visualization, geophysicists prefer that the intensity of signal records be displayed with areas above the reference line
+    filled in black, as shown in <a href="#fig33" data-reference-type="ref" data-reference="fig33">figure (b)</a>. In this example, the cosines
+    are all aligned around <em>t = 0</em>, differing only in frequency.</p>
+
+    <p>If we consider that the subsurface behaves like a series of mass-spring systems, each will contribute to the response of the seismic
+    waves (perturbations) according to its characteristics (<span class="math inline">\(m \text{ and } K\)</span>).</p>
+
+    <p>If we want to represent a distorted signal, we can simply shift some of the cosines by <span class="math inline">\(\theta\)</span> 
+    degrees, that is, <span class="math inline">\(\cos(\omega t + \theta)\)</span>, altering their phase. In 
+    <a href="#fig34" data-reference-type="ref" data-reference="fig34">Figure 34</a>, we see an example of such a shift in
+    <span class="math inline">\(\theta\)</span>.</p>
+
+    <figure id="fig34" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 34 Distorted Signal.png" alt="Distorted Signal" />
+        <figcaption>Figure 34: Distorted Signal</figcaption>
+    </figure>
+
+    <p>When <span class="math inline">\(\theta = 90^\circ, \text{ then } \cos(\omega t + \frac{\pi}{2}) = \sin(\omega t)\)</span>, 
+    and we have a representation of sines. Thus, the most general representation of the Fourier series is given by the equation below:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        y(t) = a_0 + a_1 \cos(1\omega_0 t + \theta_1) + a_2 \cos(2\omega_0 t
+    + \theta_2) + \dots + a_k \cos(k \omega_0 t + \theta_k) \label{eq:3.93}
+    \end{equation}\]</span></p>
+
+    <p>The graphical representation of these functions by their amplitudes
+    and phases as a function of frequency is a convenient way to visualize
+    these series. These graphs, called spectra, represent the frequency
+    domain as opposed to the time domain.</p>
+
+    <p>In the figure below, we see the time-domain signal on the left and its corresponding amplitude spectrum on the right. The frequency-domain
+    representation of a pulse corresponds to the sum of infinite sine waves with unit amplitude. Note that the amplitudes are represented as
+    percentages (<a href="#fig35" data-reference-type="ref" data-reference="fig35">Figure 35</a>).</p>
+
+    <figure id="fig35" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 35 Time Domain vs. Frequency Domain.png" alt="Time Domain vs. Frequency Domain" />
+        <figcaption>Figure 35: Time Domain vs. Frequency Domain</figcaption>
+    </figure>
+
+    <p>Note that in the example of <a href="#fig35" data-reference-type="ref" data-reference="fig35">Figure 35</a>, the pulse corresponds to a
+    distribution of amplitudes in the frequency range between 0 Hz and 100 Hz, with a peak at 40 Hz.</p>
+
+    <p>The amplitude spectrum alone is limited. In <a href="#fig36" data-reference-type="ref" data-reference="fig36">Figure 36</a>, we see how the
+    representation of the amplitude spectrum does not inform the phase shift between the sine waves.</p>
+
+    <figure id="fig36" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 36 Spectrum Representation.png" alt="Spectrum Representation"/>
+        <figcaption>Figure 36: Spectrum Representation</figcaption>
+    </figure>
+
+    <p>For a complete representation of the function in the frequency domain, in addition to the amplitude graphs (<span
+    class="math inline">\(a_i \times \omega_i\)</span>), we need phase graphs (<span class="math inline">\(\theta_i \times \omega_i\)</span>).
+    In <a href="#fig37" data-reference-type="ref" data-reference="fig37">Figure 37</a>, we see some examples of the effect of phase shifts in a
+    given wavelet.</p>
+    
+    <figure id="fig37" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 37 Figures (b), (c), and (d) show the effects of Phase Shifts in wavelet (a)" />
+        <figcaption>Figures 37: Figures (b), (c), and (d) show the effects of Phase Shifts in wavelet (a)</figcaption>
+    </figure>
+
+    <h4>3.2.7 Seismic Signal Processing</h4>
+
+    <p>So far, we have shown some examples of reflections to provide an
+    introduction to seismology. As presented, we see that the raw data
+    obtained from seismic surveys require various corrections to ensure the
+    proper representation of the subsurface. In practice, there are faults,
+    inclined surfaces, noise, etc., that affect the seismic signal and
+    require processing for correct subsurface representation. Seismic signal
+    processing can be divided into several stages.</p>
+
+    <p><strong>Preprocessing</strong>. This step corrects distortions caused
+    by recording equipment, the difference in relative position (elevation)
+    between the emitter and receiver, etc.</p>
+
+    <p><strong>Amplitude Correction</strong>. This corrects the energy
+    dissipation caused by the spherical spreading of the signal and
+    inelastic processes such as internal friction and fluid movement in the
+    pores of rocks, which result in the absorption of the higher-frequency
+    components of the signal. Practical experience shows that just 3 seconds
+    of travel time are enough for frequencies above 60 Hz to be filtered by
+    the subsurface.</p>
+
+    <p>It is found that the limit of vertical resolution corresponds to a
+    quarter of the dominant wavelength. Since <span class="math inline">\(v
+    = f \lambda\)</span>, we have <span class="math inline">\(\lambda/4 =
+    v/4f\)</span>, where <span class="math inline">\(\lambda\)</span> is the
+    wavelength, <span class="math inline">\(v\)</span> is the velocity
+    between the two reflectors, and <span class="math inline">\(f\)</span>
+    is the dominant frequency. The following relationship between velocity
+    and vertical resolution is obtained:</p>
+
+    <table id="table4">
+    <caption>Table 4</caption>
+    <thead>
+        <tr>
+        <th></th>
+        <th colspan="3"><span class="math inline">\(\lambda\)</span>/4 (m)</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>v (m/seg)</td>
+        <td>f = 50Hz</td>
+        <td>f = 40Hz</td>
+        <td>f = 30Hz</td>
+        </tr>
+        <tr>
+        <td>2000</td>
+        <td>10,0</td>
+        <td>12,5</td>
+        <td>16,7</td>
+        </tr>
+        <tr>
+        <td>3000</td>
+        <td>15,0</td>
+        <td>18,8</td>
+        <td>25,0</td>
+        </tr>
+        <tr>
+        <td>4000</td>
+        <td>20,0</td>
+        <td>25,0</td>
+        <td>33,3</td>
+        </tr>
+        <tr>
+        <td>5000</td>
+        <td>25,0</td>
+        <td>31,3</td>
+        <td>41,7</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <p>As depth increases, both the propagation velocity increases and frequency decreases, leading to a reduction in resolution. This
+    restriction on higher frequencies imposes limitations on seismic investigations.</p>
+
+    <p>It is noted that even reflections of only 6% (or <span class="math inline">\(R = 0,06\)</span>) can be detected using the
+    seismic reflection method. Therefore, to predict whether two lithologies will generate a detectable reflection, it is necessary to know the
+    propagation velocities of seismic waves and the densities of the rock formations, in addition to having very sensitive receiver instruments.
+    Since the reflected signal is a small fraction of the original wave, it is often contaminated with noise, requiring filtering.</p>
+
+    <p><strong>Deconvolution</strong>. Deconvolution seeks to increase vertical resolution by compressing the wavelet. Deconvolution provides a
+    quantitative estimate of the distribution of various physical parameters capable of characterizing subsurface geology.</p>
+
+    <p>Predictive deconvolution suppresses multiple reflections and,
+    optionally, alters the input data spectrum to increase resolution.</p>
+
+    <p><strong>CDP Stacking</strong>. Families of seismic traces from common
+    points are grouped, and travel time corrections are made to align these.
+    Subsequently, these traces are summed, and the average is adopted. The
+    traces are then placed side by side to form a seismic section.</p>
+
+    <p><strong>Velocity Analysis</strong>.</p>
+    <p><strong>Diffraction in Inclined Structures</strong>. <a href="#fig38" data-reference-type="ref" data-reference="fig38">Figure 38</a> shows
+    the reflection paths in an inclined structure. The inclinations cause
+    reflections that appear at the receivers as a (fictitious) point deeper
+    than the actual point, resulting in crossing traces (called bow ties).</p>
+
+    <figure id="fig38" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 38 Distortions Caused by Elevation Differences.png" alt="Distortions Caused by Elevation Differences" />
+        <figcaption>Figure 38: Distortions Caused by Elevation Differences</figcaption>
+    </figure>
+
+    <h2>3.3 EXPLORATORY PROGRAM</h2>
+
+    <p>The mapping of sedimentary basins, along with their respective geological ages, is one of the first steps in evaluating the potential
+    for oil accumulation in a region. In <a href="#fig39" data-reference-type="ref" data-reference="fig39">Figure 39</a>, we see the main
+    Brazilian sedimentary basins.</p>
+
+    <figure id="fig39" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 39 Mapping of Sedimentary Basins.png" alt="Mapping of Sedimentary Basins" />
+        <figcaption>Figure 39: Mapping of Sedimentary Basins</figcaption>
+    </figure>
+
+    <p>In the auction process for an exploratory area, regulatory agencies provide the mapping that may have varying degrees of precision. After
+    acquiring the exploration rights for an area (or block), oil companies establish an exploratory program that consists of defining indirect and
+    direct methods of formation evaluation. The first stage of an exploratory program is conducting a geological study to reconstruct the
+    conditions of hydrocarbon formation and accumulation in the region. In <a href="#fig40" data-reference-type="ref" data-reference="fig40">Figure 40</a>, 
+    we see an example of the stages followed in field exploration.</p>
+
+    <figure id="fig40" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 40 Phases of Exploration.jpg" alt="Phases of Exploration"/>
+        <figcaption>Figure 40: Phases of Exploration</figcaption>
+    </figure>
+
+    <p>Today, almost all sedimentary basins have already been explored in
+    some form. Therefore, modern interpretation work involves correlating
+    the information acquired from the exploratory well logs with the seismic
+    section, topics we will explore later.</p>
+
+    <h4>3.3.1 Exploratory Wells</h4>
+
+    <p>During the exploration phase, both stratigraphic wells, aimed at deepening geological and geophysical knowledge, and wildcat wells, aimed
+    at discovering deposits based on the data already collected, are drilled.</p>
+
+    <p>When an exploratory well is drilled to obtain information about a new area or a poorly known region, it is unlikely that the well will be used
+    as a production well. It can only be properly constructed when the necessary information for well engineering design, such as pore
+    pressure, fluid presence, permeability, and reservoir rock consolidation, is available. This information is not available before
+    the first well and is called geoengineering data. Therefore, the practice is for this type of well to be of minimum cost, aimed solely at
+    obtaining information, and subsequently abandoned. However, there are cases where the area knowledge is reasonable, and oil companies choose
+    to drill more complex wells capable of being used as producers during the field's productive phase.</p>
+
+    <p>The drilling of a well occurs through the rotational action of a drill column with a drill bit. Rock fragments are continuously removed
+    by a drilling fluid called mud. The drilling fluid also serves to cool and lubricate the drill bit, support rock fragments, ensure the
+    stability of the wellbore walls, and more. Steel pipes are used to line the well walls. Drilling along the well's trajectory is affected by the
+    type and thickness of the various rock layers, as shown in <a href="#fig41" data-reference-type="ref" data-reference="fig41">Figure 41</a>.</p>
+
+    <figure id="fig41" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 41 Drilling.png" alt="Drilling"/>
+        <figcaption>Figure 41: Drilling</figcaption>
+    </figure>
+
+    <p>The increase in drilling speed, due to the greater fluidity of hydrocarbon-saturated sedimentary rocks, is one of the indications of
+    the presence of oil. Upon discovering an accumulation, the goal is to estimate its top and base, thus determining the reservoir's height.</p>
+
+    <p>Since some reservoirs have a gas cap at the top and many have a water layer at the bottom, the gas-oil and oil-water contacts are often sought
+    as a way to delimit the formation's height.</p>
+
+    <p>Some oil reservoirs have enough pressure energy to transport fluids to the surface. This natural flow is observed during drilling by the
+    return of hydrocarbons to the wellbore.</p>
+
+    <p>Coring is the process of obtaining a rock sample during drilling. The most common method is hollow coring, where the sample is accommodated
+    inside the drill column and later retrieved by the drilling rig operators.</p>
+
+    <p>Cores (<a href="#fig42" data-reference-type="ref" data-reference="fig42">Figure 42</a>) are collected and analyzed for density, chemical
+    composition, fossil identification, presence of hydrocarbons, etc.</p>
+
+    <figure id="fig42" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 42 Cores (a) cut in half, (b) whole.png" alt="Cores (a) cut in half, (b) whole" />
+        <figcaption>Figure 42: Cores (a) cut in half, (b) whole</figcaption>
+    </figure>
+
+    <h4>3.3.2 Well Logging</h4>
+
+    <p>During the drilling stage of exploratory wells, it is common to lower
+    logging tools to measure various properties of the formation along the
+    wellbore, a process known as well logging <sup id="fnref4"><a href="#fn4" role="doc-noteref">4</a></sup>.
+    This can be done after drilling the well or even during drilling. In the
+    latter case, it is known as logging while drilling. These measurements
+    are based on the electrical, acoustic, and radioactive properties of the
+    rock formations.</p>
+
+    <p>The electrical log was the first logging process to provide relevant
+    data for detecting hydrocarbon-bearing formations. It is based on the
+    difference in electrical resistivity of oil, gas, and water. Formations
+    saturated with water, for example, have lower resistivity compared to
+    those with oil or gas since water is a better conductor of electricity.
+    It is observed that the resistivity of a rock fully saturated with water
+    is proportional to the resistivity of the water and inversely
+    proportional to the porosity of the medium. Gus Archie proposed the
+    following equation:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        R = \frac{aR_W}{\emptyset^m} \label{eq:3.94}
+    \end{equation}\]</span></p>
+
+    <p>Where:</p>
+    <blockquote>
+        <p><span class="math inline">\(a\)</span> = tortuosity coefficient</p>
+        <p><span class="math inline">\(R_W\)</span> = electrical resistivity of the water</p>
+        <p><span class="math inline">\(\emptyset\)</span> = porosity</p>
+        <p><span class="math inline">\(m\)</span> = cementation exponent</p>
+    </blockquote>
+
+    <p>In a hydrocarbon-bearing formation with water, we must consider water saturation, so the equation becomes:</p>
+
+    <p><span class="math display">\[\begin{equation}
+        R = \frac{aR_W}{\emptyset^m S^n_W} \label{eq:3.95}
+    \end{equation}\]</span></p>
+
+    <p>Where <span class="math inline">\(n\)</span> = saturation exponent.</p>
+
+    <p>The electrical resistivity of pure water is a known value, but since connate water contains salts that reduce resistivity (increase
+    conductivity), a water sample is sought during drilling for experimental determination of this property. However, this is not always possible due
+    to the potential mixing of connate water with drilling fluid. From
+    cores, the coefficients <span class="math inline">\(a \text{ and }m\)</span> are experimentally determined. In the
+    absence of water samples and cores that can be used for experimental evaluation, typical values can be used.</p>
+
+    <p>One of the first methods used for estimating the volume of
+    hydrocarbons in reservoirs was developed by Gus Archie around 1950. This
+    geophysicist correlated data obtained from electrical resistivity logs
+    and the porosity of formations derived from well logging to estimate the
+    volume of hydrocarbons present in the reservoir, according to the
+    equation below.</p>
+
+    <p><span class="math display">\[\begin{equation*}
+    N = A \cdot h \cdot {\phi} \cdot (1 - S_{W}) 
+    \end{equation*}\]</span></p>
+
+    <p>Where:</p>
+    <blockquote>
+        <p><span class="math inline">\(N\)</span> = total volume of hydrocarbons retained in the formation</p>
+        <p><span class="math inline">\(\phi\)</span> = porosity</p>
+        <p><span class="math inline">\(A\)</span> = area</p>
+        <p><span class="math inline">\(h\)</span> = height of the formation</p>
+        <p><span class="math inline">\(S_{W}\)</span> = water saturation</p>
+    </blockquote>
+
+    <p><em><strong>Example.</strong> Consider that, based on seismic,
+    gravimetric, and electromagnetic analyses of an area, geologists
+    indicate an extension of <span class="math inline">\(2{,}5 \times 10^6
+    \, \text{m}^2\)</span> with potential for oil accumulation. After
+    drilling a well, the presence of hydrocarbons was confirmed. The
+    electric log data indicate a water saturation of 15%, i.e., <span
+    class="math inline">\(S_{W} = 0{,}15\)</span>, and core evaluation
+    indicates a porosity of 25%. Gamma ray or magnetic potential logs
+    indicate that the height of the formation is 270 m. Determine the volume
+    <span class="math inline">\(N\)</span> of hydrocarbons present under
+    reservoir conditions.</em></p>
+
+    <p><span class="math display">\[\begin{equation*}
+    N = 2{,}5 \times 10^6 \cdot 270 \cdot 0{,}25 \cdot (1 - 0{,}15) = 8{,}8
+    \times 10^5 \, \text{m}^3
+    \end{equation*}\]</span></p>
+
+    <p>The logs do not directly inform variables of interest such as
+    porosity, permeability, or fluid saturation, but they generate a visual
+    image along the well depth, allowing these properties to be inferred by
+    combining different profiles. Below are some of the most common
+    profiles.</p>
+
+    <p><strong>Spontaneous Potential - SP</strong>. This measures
+    resistivity or resistance to electrical current. It is one of the oldest
+    logs still in use today. Since hydrocarbons are poor conductors of
+    electricity while connate water is a good conductor, this profile helps
+    infer the amount and salinity of the water contained in a rock layer.
+    Note that since freshwater is also a poor conductor, this profile will
+    show high resistivity values, which may lead to incorrect conclusions
+    about the presence of hydrocarbons. This profile is affected by
+    water-based drilling fluids.</p>
+
+    <p><strong>Induction - ILD</strong>. When clay-based formations are
+    encountered, they swell upon contact with water-based drilling fluids,
+    undesirably reducing the rock's permeability. This issue is addressed by
+    using oil-based, air-based, or foam-based (air and water mixture)
+    drilling fluids. In these cases, magnetic field induction is used
+    because obtaining an electrical resistivity log is compromised, as these
+    fluids are poor electrical conductors.</p>
+
+    <p><strong>Gamma Ray - GR</strong>. Gamma rays are emitted from the
+    nucleus of unstable atoms. In nature, uranium, thorium, and potassium
+    atoms commonly emit gamma rays. There are different ways to measure this
+    profile. Clay-based formations such as shales have high natural
+    radioactivity due to their high potassium-40 content. Carbonate
+    formations and sandstones have low amounts of potassium isotopes.</p>
+
+    <p>Since uranium and thorium may also be present, modern tools can
+    differentiate the radiation emitted by different substances. This
+    profile is used to identify the amount of clay in a rock.</p>
+
+    <p>As the densities of formations are proportional to their gamma ray
+    attenuation, a tool with a source and sensor can also determine the
+    formation's density.</p>
+
+    <p><strong>Neutron - NPHI.</strong> This method is based on the effects
+    that a neutron beam has on hydrogen-containing molecules. Neutrons are
+    uncharged particles about the size of a hydrogen nucleus and can
+    penetrate matter to reach atomic nuclei. The attenuation of these beams
+    is proportional to the number of hydrogen atoms present. Since water
+    contains a relatively large number of hydrogen atoms compared to
+    hydrocarbons, this method infers the water concentration. It is used to
+    estimate porosity, lithology, and the presence of light hydrocarbons or
+    gas.</p>
+
+    <p><strong>Sonic - DT.</strong> This measures the transit time
+    difference of a mechanical wave through rocks. It is based on the fact
+    that the propagation of these waves varies according to the medium's
+    density. Their velocity is higher in solids than in liquids and gases,
+    respectively. Thus, for two similar rock samples, the wave propagation
+    velocity will be higher in the one containing less gas and more liquid.
+    Since this higher liquid content is related to the amount of water in
+    the rock, this profile can be used to estimate porosity and rock
+    compaction.</p>
+
+    <p><strong>Density - RHOB.</strong> This profile is based on the
+    reflection of a gamma ray beam to estimate density, porosity, and the
+    presence of light hydrocarbons and gas. Below is an example of logs and
+    how their combination allows the inference of some properties of rock
+    formations near the well.</p>
+
+    <p>The profiles show many oscillations, not only due to changes in the
+    formation's properties along its height but also because of the
+    measurement methods' uncertainty. When interpreted based on results
+    obtained from similar formations, these profiles allow only trends to be
+    inferred, rarely providing absolute values for variables such as
+    permeability, porosity, density, etc.</p>
+
+    <p>In <a href="#fig43" data-reference-type="ref" data-reference="fig43">Figure 43</a>, we see an example where gamma ray and electrical
+    resistivity logs were performed on a formation. In the upper part of the profiles, high electrical resistivity values indicate the presence of
+    hydrocarbons, while low gamma radiation suggests a high-porosity formation, concluding that it is sandstone. In the middle section, the
+    presence of shale is observed, as indicated by high gamma radiation and low electrical resistivity.</p>
+
+    <figure id="fig43" data-latex-placement="h">
+        <img src="../Figures/Chap 3/Figure 43 Logs.png" alt="Logs" />
+        <figcaption>Figure 43: Logs</figcaption>
+    </figure>
+
+    <p>In the geophysical logging operation, petrophysical parameters are
+    measured using sophisticated tools known as sondes or logging tools.
+    These sondes carry various types of sensors into the wells, which
+    capture signals during acquisition and transmit them to the surface.
+    These signals are processed and generate geophysical logs, well logs,
+    electrical logs, etc. The generated logs are then interpreted, and
+    petrophysical properties are inferred from the responses of electrical,
+    thermal, acoustic, and other sensors.</p>
+
+    <p>Although this method provides valuable information about the
+    subsurface with good accuracy and resolution, it incurs high costs.
+    Consequently, few wells are generally drilled.</p>
+
+    <h2>3.4 FORMATION EVALUATION</h2>
+
+    <p>Upon detecting hydrocarbons, it is common to perform a quick
+    formation test (TF) without installing a casing in the well, which is
+    why it is called an open-hole test.</p>
+
+    <p>Subsequently, short-term tests may be performed as part of the
+    exploration process, aiming to delimit the reservoir. To declare the
+    field's commercial viability, it is necessary to estimate the volume of
+    recoverable reserves since only a fraction of the total volume of
+    hydrocarbons in the reservoirs can be effectively produced. During this
+    formation evaluation stage, the reservoir is mapped, and simulations are
+    carried out using seismic data and the information obtained from the
+    exploratory wells.</p>
+
+    <p>The compilation of available information is interpreted by a team of
+    geologists and engineers in a continuous process of deepening the
+    knowledge of the reservoir and reducing uncertainties. In this regard,
+    oil companies may decide to conduct additional tests on exploratory
+    wells or opt for the drilling of another well.</p>
+
+    <h4>3.4.1 Well Tests</h4>
+
+    <p>Tests performed after casing installation are called cased hole
+    formation tests (CHFT). These tests can have various objectives, such as
+    inferring the well's productivity, checking for formation damage,
+    sampling fluids for evaluating oil, gas, and water content, etc.</p>
+
+    <p>When tests are conducted solely to gather additional information
+    about a previously discovered reservoir, they are referred to as
+    Reservoir Data Acquisition (RDA) tests.</p>
+
+    <p>One of the most important tests is the pressure check before and
+    after the oil (or gas) flow, which serves to infer the reservoir's
+    production potential. Before oil production begins, the pressure across
+    the reservoir is uniform. This pressure is called static pressure <span
+    class="math inline">\(p_{E}\)</span>. After oil flow starts, the
+    pressure at the wellbore stabilizes at a value lower than the static
+    pressure. This pressure is called wellbore pressure <span
+    class="math inline">\(p_{W}\)</span>.</p>
+
+    <p>In CHFTs, the well is put into flow in two stages. The first flow is
+    done to clean the well. The downhole pressure, called the first static
+    pressure, is measured. The second flow is longer, and the downhole
+    pressure is measured again, this time called the second static pressure.
+    Since both tests are short, there is no substantial removal of mass from
+    the reservoir. Therefore, unless the reservoir is very small, both the
+    first and second static pressures should be close, corresponding to the
+    reservoir's <span class="math inline">\(p_{E}\)</span>. A second static
+    pressure lower than the first indicates a non-commercial
+    accumulation.</p>
+
+    <p>After a commercial declaration is made, long-term tests are conducted
+    to help delimit the field. These tests are short in duration when
+    compared to the typical productive life of a reservoir, which is about
+    25 years. Significant pressure drops indicate that the reservoir is
+    small or has low permeability. Large reservoirs with high permeability
+    do not experience significant pressure drops during the test, as the
+    volume produced is very small relative to the amount of oil present in
+    the reservoir.</p>
+
+    <p>When the test duration is less than 72 hours, Brazilian law permits
+    the burning of oil and gas. Beyond 72 hours, it is considered a
+    long-term test (LTT), with a series of restrictions regarding burning,
+    as we will see in the chapter on Fiscal and Legal Systems later.</p>
+
+    <h2>3.5 INTERPRETATION</h2>
+
+    <p>Indirect methods are a first approach in mapping structures with
+    potential for oil accumulation. In geologically favorable areas,
+    geologists propose geological models to explain the process of oil
+    generation, migration, and accumulation in the region.</p>
+
+    <p>The integration of seismic results with those obtained from well logs
+    allows for adjustments to the proposed geological model. Seismic data
+    have the advantage of horizontal (area) resolution but are limited in
+    vertical resolution. On the other hand, well logging provides "direct"
+    information with good vertical resolution but limited horizontal
+    coverage. In geological modeling, interpreted information from indirect
+    evaluations and direct well data is used to construct the structural and
+    stratigraphic framework of the reservoir.</p>
+
+    <p>Well logs efficiently reproduce correlation patterns between nearby
+    wells and aid in constructing geological maps and defining the geometry
+    of sedimentary bodies and environments.</p>
+
+    <p>In geological maps, areas composed solely of igneous and metamorphic
+    rocks (non-sedimentary) are virtually eliminated, as are small basins
+    with very thin sedimentary layers or without structures favorable for
+    accumulation. In the early days of exploration, the focus was almost
+    exclusively on anticlinal structures.</p>
+
+    <p>The geological model is continuously improved as more wells are
+    drilled. Since the data are representative of the area where the wells
+    were drilled, they generally do not apply to the entire reservoir, and
+    extrapolation can be a potential source of error.</p>
+
+    <p>When no data are available for a given region, experience gained from
+    similar reservoirs discovered in other locations with analogous geology
+    and modes of hydrocarbon occurrence can be used. This is an important
+    aid in generating geological models. Reservoirs can be considered
+    analogous when, for example, they have the same geological formation age
+    and sedimentary basin, similarity in their deposition history (rock
+    type), architectural elements (such as unconformities), or similar rock
+    properties and fluid characteristics. Analytical models are continuously
+    being improved and developed to incorporate more information.</p>
+
+    <p>The entire indirect evaluation program (seismic, gravimetric, and
+    magnetic potentials) provides a vast amount of technical information,
+    with relatively small investments compared to the cost of drilling a
+    single exploratory well. They serve as a reference for defining the
+    ideal location for exploratory wells, which is the only certain way to
+    verify the existence of hydrocarbons.</p>
+
+    <p>In an exploration campaign, it is essential to understand the
+    production potential of an entire region. Hydrocarbons can be present in
+    liquid or gaseous forms, as gas dissolved in water or coal beds, in
+    shale, or other types of viscous hydrocarbon deposits. Accumulations can
+    vary in number, size, and quality.</p>
+
+    <p>Despite increasing computer power and the development of various
+    numerical methods for processing and correcting seismic data, human
+    interpretation is still required. This is the case with 3D
+    visualization. Software is constantly evolving to assist in this
+    visualization, which is becoming more sophisticated and allows for a
+    better understanding of reservoirs.</p>
+
+    <p>The decision to drill an exploratory well results from an assessment
+    of the risks involved, especially in offshore environments due to the
+    high costs.</p>
+
+    <p>The decision to undertake an exploration campaign also depends on the
+    company's financial health, the contractual conditions of the
+    exploratory block, the distance to supply sources, and future oil price
+    prospects. Concession contracts for exploration rights with short
+    expiration periods or those near other producing blocks may, for
+    example, accelerate the decision to drill wells.</p>
+
+    <p>The decision-making process for an exploratory program also considers
+    the probability of success and the commercial viability of the prospect,
+    which depends on associated production costs. Commercial accumulations
+    in onshore fields can, for example, be relatively smaller than those in
+    offshore fields since both exploration and production costs are lower.
+    However, there are exceptions, such as exploration in forest regions
+    where both seismic surveys and the necessary infrastructure for
+    production and oil and gas transportation can be very costly.</p>
+
+    <p>In addition to the total volume of hydrocarbons, attention must be
+    paid to the size of the fields that may be discovered. There are cases
+    where regions with the same total amount of hydrocarbons have very
+    different numbers of fields. Greater fragmentation results in higher
+    production costs, affecting the recoverable volume.</p>
+
+    <p>Recently, studies for defining areas favorable for oil accumulation
+    have evolved to incorporate probabilistic analyses.</p>
+
+    <p>The historical exploration results of a region provide an important
+    statistical basis for future discoveries. Statistical surveys can be
+    conducted for variables such as porosity and oil saturation based on
+    data from producing fields in the same producing region or analogous
+    fields in other locations.</p>
+
+    <p>There are statistics for various parameters, but they generally do
+    not apply to height and area. These are more related to the region's
+    geological history. Initially, a probability distribution for height and
+    area is often assumed based on the exploratory well logs and later
+    revised as more wells are drilled and logged.</p>
+
+    <p>There are situations where the probabilities are not independent. In
+    some regions, for example, the porosity of thick reservoirs (with great
+    height) tends to be greater than that of thinner reservoirs. This
+    interdependence between variables can be treated probabilistically if we
+    consider dependent events, thus sophisticating the evaluation.</p>
+    
+    <p>In practice, there is no rule or mathematical formulation that allows
+    us to associate the historical frequencies of each variable with their
+    probability distributions for an exploratory prospect. The determination
+    of probabilities takes on a subjective character, based on the
+    experience of geologists obtained in similar situations.</p>
+
+    <p class="section-break"><strong>EXERCISES</strong></p>
+    <p>For exercises 1 to 10 below, indicate whether they are true or false:</p>
+
+    <ol>
+        <li><p>Regarding the oil generation system, it can be stated that:</p>
+            <ol class="alpha">
+            <li><p>Reservoirs are composed of sedimentary rocks. ( )</p></li>
+            <li><p>Oil must be contained in a sealing rock that prevents its
+            migration to the surface. ( )</p></li>
+            <li><p>When source rocks are located in regions with temperatures
+            between 65°C and 165°C, thermal cracking of oil occurs. ( )</p></li>
+            <li><p>The thermochemical generation of gas is facilitated by increasing
+            ambient temperature. ( )</p></li>
+            </ol>
+        </li>
+        <li><p>Metamorphic rocks have very low permeability. ( )</p></li>
+        <li><p>The seismic method for oil prospecting is based on the
+        measurement of propagation time and intensity of waves reflected at the
+        interface between rock formations. ( )</p></li>
+        <li><p>When a well test shows a large difference between the first
+        static pressure and the second static pressure, it indicates a large oil
+        reservoir. ( )</p></li>
+        <li><p>Shale is a metamorphic rock with low permeability. ( )</p></li>
+        <li><p>The production of shale gas and shale oil is based on the intensive use of hydraulic fracturing. ( )</p></li>
+        <li><p>Hydraulic fracturing is an important process for oil production from rock formations with high permeability. ( )</p></li>
+        <li><p>Identify which of the following factors affect the recovery factor of a reservoir:</p>
+            <ol class="alpha">
+            <li><p>Recovery method</p></li>
+            <li><p>Oil barrel price</p></li>
+            <li><p>Reservoir management techniques</p></li>
+            <li><p>Reservoir rock permeability</p></li>
+            <li><p>All of the above</p></li>
+            </ol>
+        </li>
+        <li><p>Which drive mechanism tends to have the highest recovery factor (RF)?</p>
+            <ol class="alpha">
+            <li><p>Active aquifer ( )</p></li>
+            <li><p>Gas cap ( )</p></li>
+            <li><p>Solution gas ( )</p></li>
+            </ol>
+        </li>
+        <li><p>Calculate the volume of oil, measured under standard conditions,
+        in a reservoir where the pressure is above the oil bubble point, with
+        the following characteristics:</p>
+        <blockquote>
+            <p>Total reservoir volume: <span class="math inline">\(10^{9} {m}^3\)</span></p>
+            <p>Formation porosity: 15</p>
+            <p>Connate water saturation: 30</p>
+            <p>Oil formation volume factor: 1,3</p>
+        </blockquote>
+        <p>Answer: <span class="math inline">\(N = 8,1 \times 10^{7} {m}^3 std\)</span>.</p></li>
+        <li><p>In the probabilistic evaluation of recoverable oil volume in a field, the probabilities P10, P50, and P90 correspond to decreasing
+        volumes, that is, <span class="math inline">\( \text{Volume(P10) } \mathrm{&gt;} \text{Volume(P50) } \mathrm{&gt;} \text{Volume(P90) }\)</span>. ( )</p></li>
+    </ol>
+
+    <h2>BIBLIOGRAPHIC REFERENCES</h2>
+
+    <p>Ashcroft, W. <em>Guide to Seismic Reflection</em>, Wiley-Blackwell Editors, West Sussex, U.K., 2011.</p>
+    <p>Kreyszig, E., <em>Advanced Engineering Mathematics</em>, John Wiley and Sons, 7th edition, 1993.</p>
+    <p>Thomas, J. E. (Editor); <em>Fundamentals of Petroleum Engineering</em>, Interciência Publishers, 2nd Edition, 2001.</p>
+    <p>Harbaugh, J. W., Davis, J. C., Wenderbourg, J. <em>Computing Risk For Oil Prospects: Principles And Programs</em>, Pergamon Elsevier Science, 1995.</p>
+    <p>Gadalah, M. R., Fisher, R. L., <em>Seismology</em>, PennWell Corporation, Tulsa Oklahoma, USA, 2005.</p>
+    <p>Yilmaz, O., <em>Seismic Data Analysis</em>, Volume I, Society of Exploration Geophysicists, second edition, 2001.</p>
+    <p>Portugal, M. S., <em>Mathematical Fundamentals for Geophysics I</em>, Blucher Publishers, 2012.</p>
+    <p><em>RAGAGNIN, G.M. &amp; MORAES, M.A.S., 2008 - Seismic Geomorphology and Connectivity of Deepwater Reservoirs. SPE.</em></p>
+    <p><em>ROBEIN, E., 2003 - Velocities, Time-imaging in Reflection Seismics. Principles and Methods. EAGE Publications.</em></p>
+    <p><em>SHERIFF, R.E., 1991 - Encyclopedic Dictionary of Exploration Geophysics, Third Edition.</em></p>
+
+
+    <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+    <hr />
+    <ol class="footernotes">
+        <li id="fn1">
+        <p><em>Study of the earth using measurements of its physical properties</em>
+            <a href="#fnref1" class="footnote-back"role="doc-backlink">↩︎</a>
+        </p>
+        </li>
+        <li id="fn2">
+        <p><em>See Appendix.</em>
+            <a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a>
+        </p>
+        </li>
+        <li id="fn3">
+        <p><em>See Appendix for more detail</em>
+            <a href="#fnref3" class="footnote-back"role="doc-backlink">↩︎</a>
+        </p>
+        </li>
+        <li id="fn4">
+        <p><em>Logging in English.</em>
+            <a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a>
+        </p>
+        </li>
+    </ol>
+    </section>
+    <hr />
+
+</body>
+
+</html>
