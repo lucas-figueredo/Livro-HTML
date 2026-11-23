@@ -69,7 +69,7 @@
 
           const section = document.createElement("section");
           section.className = "chapter";
-          section.innerHTML = html;
+          section.innerHTML = html.replace(/<base[^>]*>/gi, "");
           book.appendChild(section);
 
           // opcional: marcador invisível
