@@ -67,9 +67,12 @@
         .then(html => {
           const book = document.getElementById("book");
 
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+
           const section = document.createElement("section");
           section.className = "chapter";
-          section.innerHTML = html.replace(/<base[^>]*>/gi, "");
+          section.innerHTML = doc.body ? doc.body.innerHTML : html;
           book.appendChild(section);
 
           // opcional: marcador invisível
