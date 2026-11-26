@@ -8,7 +8,9 @@
     <!-- MathJax para renderizar as equações -->
     <script>
         window.MathJax = {
+            loader: { load: ['[tex]/upgreek'] },
             tex: {
+              packages: {'[+]': ['upgreek']},
               inlineMath: [['\\(', '\\)']],
               displayMath: [['\\[', '\\]']],
               tags: 'ams', 
