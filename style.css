@@ -159,12 +159,11 @@ figcaption {
     overflow-x: auto;
 }
 
-mjx-container[display="true"] {
-    text-align: left !important;
+mjx-container[jax="CHTML"][display="true"] {
     overflow-x: auto;
     overflow-y: hidden;
     max-width: 100%;
-    padding: 0.2em 0;
+    padding: 0.3em 0;
 }
 
 /* Tabelas */

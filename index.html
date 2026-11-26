@@ -13,10 +13,6 @@
               displayMath: [['\\[', '\\]']],
               tags: 'ams', 
               useLabelIds: true       
-            },
-            chtml: {
-              displayAlign: 'left',
-              displayIndent: '0em'
             }
         };
     </script>
@@ -30,8 +26,6 @@
 <body>
   <div id="book"></div>
 
-
-
   <script>
     const chapters = [
       "Chapters/chapter_1.html",
@@ -44,20 +38,49 @@
     let index = 0;
     let loading = false;
 
+    // Ajusta alinhamento (curta = centro, longa = esquerda) e escala se ultrapassar a margem
+    function adjustEquations(container) {
+      const maxWidth = container.clientWidth || document.getElementById("book").clientWidth;
+      const equations = container.querySelectorAll('mjx-container[display="true"]');
+
+      equations.forEach(eq => {
+        eq.style.fontSize = "";
+        eq.style.textAlign = "left";
+
+        const mathEl = eq.querySelector("mjx-math") || eq;
+        const eqWidth = mathEl.scrollWidth;
+
+        if (eqWidth <= maxWidth * 0.65) {
+          eq.style.textAlign = "center";
+        } else if (eqWidth <= maxWidth) {
+          eq.style.textAlign = "left";
+        } else {
+          eq.style.textAlign = "left";
+          const ratio = Math.max(0.72, (maxWidth / eqWidth) * 0.97);
+          eq.style.fontSize = (ratio * 100).toFixed(1) + "%";
+        }
+      });
+    }
+
     // Renderiza as equações só quando o MathJax terminou de carregar
     function renderMath(el) {
       const run = () => {
         if (window.MathJax && MathJax.typesetPromise) {
           MathJax.startup.promise = MathJax.startup.promise
             .then(() => MathJax.typesetPromise([el]))
+            .then(() => adjustEquations(el))
             .catch(err => console.error("MathJax:", err));
         } else {
-          // MathJax ainda não carregou: tenta de novo em instantes
           setTimeout(run, 100);
         }
       };
       run();
     }
+
+    // Recalcula se a janela for redimensionada ou girar o celular
+    window.addEventListener("resize", () => {
+      document.querySelectorAll(".chapter").forEach(adjustEquations);
+    });
 
     function loadNextChapter() {
       if (loading || index >= chapters.length) return;
@@ -79,14 +102,13 @@
           section.innerHTML = doc.body ? doc.body.innerHTML : html;
           book.appendChild(section);
 
-          // opcional: marcador invisível
           const divider = document.createElement("div");
           divider.className = "divider";
           book.appendChild(divider);
 
           index++;
 
-          // reprocessa as equações só neste capítulo
+          // reprocessa e ajusta as equações só neste capítulo
           renderMath(section);
         })
         .catch(err => console.error("Erro ao carregar capítulo:", err))
