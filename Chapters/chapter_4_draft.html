@@ -11,16 +11,18 @@
   <link rel="stylesheet" href="style.css">
 
     <!-- MathJax para renderizar as equações -->
-    <script>
-        window.MathJax = {
-            tex: {
-              inlineMath: [['\\(', '\\)']],
-              displayMath: [['\\[', '\\]']],
-              tags: 'ams',   
-              useLabelIds: true     
-            }
-        };
-    </script>
+	<script>
+		window.MathJax = {
+			loader: { load: ['[tex]/upgreek'] },
+			tex: {
+			  packages: {'[+]': ['upgreek']},
+			  inlineMath: [['\\(', '\\)']],
+			  displayMath: [['\\[', '\\]']],
+			  tags: 'ams',
+			  useLabelIds: true
+			}
+		};
+	</script>
 
     <script async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -58,9 +60,9 @@ on the development carried out by Rosa (2007).</p>
         <li>\({p}_{W}\) - Well pressure</li>
         <li>EOR - Enhanced Oil Recovery</li>
         <li>WAG - Water Alternate Gas</li>
-        <li>\(\lambdaup\) - Mobility</li>
-        <li>\({\lambdaup}_{o}\) - Oil mobility</li>
-        <li>\({\lambdaup}_{W}\) - Water mobility</li>
+        <li>\(\lambda\) - Mobility</li>
+        <li>\({\lambda}_{o}\) - Oil mobility</li>
+        <li>\({\lambda}_{W}\) - Water mobility</li>
         <li>HPAM - Partially Hydrolyzed Polyacrylamide</li>
         <li>FAWAG - Foam Assisted WAG</li>
     </ul>
@@ -283,7 +285,7 @@ droplet is (Figure 7):</p>
 </figure>
 
 <p>Considering typical values of interfacial tension (20 to 30 mN/m) and
-pore sizes (9 to 40 <span class="math inline">\(\muup\)</span>m), the
+pore sizes (9 to 40 <span class="math inline">\(\mu\)</span>m), the
 pressure differential required to displace the oil droplet can reach the
 order of 10 MPa/m (450 psi/ft). Since the pressures applied to the
 reservoir are typically much lower than this value (1 to 2 psi/ft), oil
@@ -364,22 +366,22 @@ asphaltenes.</p>
 <p><strong>Viscosified Water</strong>. Increasing the viscosity of
 injection water by adding polymers improves sweep efficiency by altering
 the mobility ratio between the fluids. The mobility (<span
-class="math inline">\(\lambdaup\)</span>) of a fluid is defined as the
+class="math inline">\(\lambda\)</span>) of a fluid is defined as the
 ratio between its effective permeability (k) in the reservoir rock and
-its viscosity (<span class="math inline">\(\muup\)</span>). The oil
-mobility is given by <span class="math inline">\(\lambdaup\)</span><span
+its viscosity (<span class="math inline">\(\mu\)</span>). The oil
+mobility is given by <span class="math inline">\(\lambda\)</span><span
 class="math inline">\({}_{o}\)</span> = k<span
 class="math inline">\({}_{o}\)</span>/<span
-class="math inline">\(\muup\)</span><span
+class="math inline">\(\mu\)</span><span
 class="math inline">\({}_{o}\)</span>, and the water mobility by <span
-class="math inline">\(\lambdaup\)</span><span
+class="math inline">\(\lambda\)</span><span
 class="math inline">\({}_{w}\)</span> = k<span
 class="math inline">\({}_{w}\)</span>/<span
-class="math inline">\(\muup\)</span><span
+class="math inline">\(\mu\)</span><span
 class="math inline">\({}_{w}\)</span>. The mobility ratio is defined by
-the ratio <span class="math inline">\(\lambdaup\)</span><span
+the ratio <span class="math inline">\(\lambda\)</span><span
 class="math inline">\({}_{w}\)</span> /<span
-class="math inline">\(\lambdaup\)</span><span
+class="math inline">\(\lambda\)</span><span
 class="math inline">\({}_{o}\)</span>. The lower the mobility ratio, the
 more favorable the oil recovery.</p>
 

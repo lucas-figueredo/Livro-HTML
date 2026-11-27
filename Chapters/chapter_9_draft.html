@@ -26,6 +26,17 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
 
+<script>
+window.MathJax = {
+  loader: { load: ["[tex]/upgreek"] },
+  tex: {
+    packages: {"[+]": ["upgreek"]},
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    tags: "ams"
+  }
+};
+</script>
 </head>
 <body>
 <h1 class="unnumbered" id="chapter-9-gas-processing">CHAPTER 9 GAS
@@ -148,7 +159,7 @@ vapor phase transfer units</p>
 solute-free basis</p>
 <p>Y<span class="math inline">\({}_{!}\)</span> - Mass of solute/mass of
 solute-free gas</p>
-<p><span class="math inline">\(\rhoup\)</span><span
+<p><span class="math inline">\(\rho\)</span><span
 class="math inline">\({}_{b}\)</span> - Specific mass of the
 adsorbent</p>
 <p>X<span class="math inline">\({}_{1}\)</span> - Mass of solute/mass of
@@ -174,9 +185,9 @@ class="math inline">\({}_{min}\)</span>/D - Minimum reflux ratio</p>
 light key component</p>
 <p>X<span class="math inline">\({}_{HK}\)</span> - Molar fraction of the
 heavy key component</p>
-<p><span class="math inline">\(\alphaup\)</span> - Relative
+<p><span class="math inline">\(\alpha\)</span> - Relative
 volatility</p>
-<p><span class="math inline">\(\alphaup\)</span><span
+<p><span class="math inline">\(\alpha\)</span><span
 class="math inline">\({}_{LK,HK}\)</span> - Average relative volatility
 of the column between the light and heavy key components</p>
 <p>V - Molar flow rate of the component</p>
